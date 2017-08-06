@@ -1,4 +1,9 @@
 # Logboard
+[![Platform](https://img.shields.io/cocoapods/p/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
+![Language](https://img.shields.io/badge/language-Swift%203.1-orange.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
+[![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://raw.githubusercontent.com/shogo4405/lf.swift/master/LICENSE.txt)
+
 Simple logging framework for your framework project.
 
 ## Usage
