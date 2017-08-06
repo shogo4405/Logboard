@@ -23,6 +23,10 @@
 		293875D51F370F64009F4B30 /* Logboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 293875621F35D564009F4B30 /* Logboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293875D61F370F6C009F4B30 /* Logboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2938752B1F35D39B009F4B30 /* Logboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293875D71F370F77009F4B30 /* Logboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2938759E1F35D643009F4B30 /* Logboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		293875E21F374DFC009F4B30 /* ConsoleAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875BC1F35DD1C009F4B30 /* ConsoleAppender.swift */; };
+		293875E31F374DFF009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
+		293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875B71F35DB5C009F4B30 /* LogboardAppender.swift */; };
+		293875E51F374E04009F4B30 /* NullAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875C11F35DD77009F4B30 /* NullAppender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -385,6 +389,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293875E21F374DFC009F4B30 /* ConsoleAppender.swift in Sources */,
+				293875E31F374DFF009F4B30 /* Logboard.swift in Sources */,
+				293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */,
+				293875E51F374E04009F4B30 /* NullAppender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +636,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -650,6 +659,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
