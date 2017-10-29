@@ -44,6 +44,34 @@ end
 github "shogo4405/Logboard" ~> 1.1.0
 ```
 
+## Appenders
+### ConsoleAppender
+Use print function. You can see XCode's console.
+```
+let logger = Logboard.with("identifier")
+let multi = MultiAppender()
+multi.appenders.append(ConsoleAppender())
+multi.appenders.append(SocketAppender())
+logger.appender = multi
+```
+
+### MultiAppender
+```
+let logger = Logboard.with("identifier")
+let multi = MultiAppender()
+multi.appenders.append(ConsoleAppender())
+multi.appenders.append(SocketAppender())
+logger.appender = multi
+```
+
+### SocketAppender
+```
+let logger = Logboard.with("identifier")
+let socket = SocketAppender()
+socket.connect("toHost", 22222)
+logger.appender = socket
+```
+
 ## License
 New BSD
 

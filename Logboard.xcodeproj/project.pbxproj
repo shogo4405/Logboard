@@ -11,6 +11,7 @@
 		2921F09D1FA5EEB300EEF1F4 /* NetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F09C1FA5EEB300EEF1F4 /* NetClient.swift */; };
 		2921F09F1FA5EEDE00EEF1F4 /* NetSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F09E1FA5EEDE00EEF1F4 /* NetSocket.swift */; };
 		2921F0A11FA5EFD500EEF1F4 /* LogboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F0A01FA5EFD500EEF1F4 /* LogboardService.swift */; };
+		2921F0A41FA6020100EEF1F4 /* Logboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293875A61F35D6A9009F4B30 /* Logboard.framework */; };
 		293875AE1F35D746009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875AF1F35D747009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875B11F35D748009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
@@ -31,12 +32,12 @@
 		293875E31F374DFF009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875B71F35DB5C009F4B30 /* LogboardAppender.swift */; };
 		293875E51F374E04009F4B30 /* NullAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875C11F35DD77009F4B30 /* NullAppender.swift */; };
+		296708FD1FA60DC400278D68 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69B61FA5CEE2005DF398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69B51FA5CEE2005DF398 /* AppDelegate.swift */; };
 		29CC69B81FA5CEE2005DF398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69B71FA5CEE2005DF398 /* ViewController.swift */; };
 		29CC69BA1FA5CEE2005DF398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CC69B91FA5CEE2005DF398 /* Assets.xcassets */; };
 		29CC69BD1FA5CEE2005DF398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CC69BB1FA5CEE2005DF398 /* Main.storyboard */; };
 		29CC69C41FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
-		29CC69C51FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69C61FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69C71FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69C91FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
@@ -44,6 +45,16 @@
 		29CC69CB1FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
 		29CC69CC1FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2921F0A51FA6020700EEF1F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293874AC1F359A3B009F4B30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293875A51F35D6A9009F4B30;
+			remoteInfo = "Logboard macOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2921F09A1FA5EE8900EEF1F4 /* NetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
@@ -112,12 +123,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2921F0A41FA6020100EEF1F4 /* Logboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2921F0A21FA6007700EEF1F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		293874AB1F359A3B009F4B30 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +146,7 @@
 				29CC69B41FA5CEE2005DF398 /* LogboardConsole */,
 				293874B61F359A3B009F4B30 /* Products */,
 				2938751F1F35D1A6009F4B30 /* Sources */,
+				2921F0A21FA6007700EEF1F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +360,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2921F0A61FA6020700EEF1F4 /* PBXTargetDependency */,
 			);
 			name = LogboardConsole;
 			productName = LogboardConsole;
@@ -462,8 +483,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29CC69C51FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875B91F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
+				296708FD1FA60DC400278D68 /* SocketAppender.swift in Sources */,
 				29CC69CA1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
 				293875BE1F35DD1C009F4B30 /* ConsoleAppender.swift in Sources */,
 				293875C31F35DD77009F4B30 /* NullAppender.swift in Sources */,
@@ -511,6 +532,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2921F0A61FA6020700EEF1F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293875A51F35D6A9009F4B30 /* Logboard macOS */;
+			targetProxy = 2921F0A51FA6020700EEF1F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		29CC69BB1FA5CEE2005DF398 /* Main.storyboard */ = {
@@ -829,7 +858,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = LogboardConsole/LogboardConsole.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -850,7 +878,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = LogboardConsole/LogboardConsole.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

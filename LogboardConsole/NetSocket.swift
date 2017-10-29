@@ -23,13 +23,9 @@ public class NetSocket: NSObject {
     
     @discardableResult
     final public func doOutput(data:Data, locked:UnsafeMutablePointer<UInt32>? = nil) -> Int {
-        OSAtomicAdd64(Int64(data.count), &queueBytesOut)
         outputQueue.async {
             data.withUnsafeBytes { (buffer:UnsafePointer<UInt8>) -> Void in
                 self.doOutputProcess(buffer, maxLength: data.count)
-            }
-            if (locked != nil) {
-                OSAtomicAnd32Barrier(0, locked!)
             }
         }
         return data.count
@@ -51,7 +47,8 @@ public class NetSocket: NSObject {
                 if (0 < remain) {
                     self.doOutputProcess(fileHandle.readData(ofLength: remain))
                 }
-            } catch let _ as NSError {
+            } catch let error as NSError {
+                print(error)
             }
         }
     }
@@ -74,7 +71,6 @@ public class NetSocket: NSObject {
             }
             total += length
             totalBytesOut += Int64(length)
-            OSAtomicAdd64(-Int64(length), &queueBytesOut)
         }
     }
     

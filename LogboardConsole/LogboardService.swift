@@ -9,5 +9,6 @@ class LogboardService: NetService {
 
     func client(inputBuffer client: NetClient) {
         delegate?.onData(client.inputBuffer)
+        client.inputBuffer.removeAll()
     }
 }

@@ -1,13 +1,15 @@
 import Cocoa
+import Logboard
 
 class ViewController: NSViewController {
-    var service:NetService?
+    var service: LogboardService?
 
     @IBOutlet var textFiled: NSTextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = NetService(domain: "", type: "_log._tcp", name: "Logboard", port: 4649)
+        service = LogboardService(domain: "", type: "_log._tcp", name: "Logboard", port: 22222)
+        service?.delegate = self
         service?.startRunning()
     }
 
@@ -20,7 +22,9 @@ class ViewController: NSViewController {
 extension ViewController: LogboardServiceDelegate {
     func onData(_ data: Data) {
         if let string = String(bytes: data, encoding: .utf8) {
-            textFiled.insertText(string, replacementRange: NSMakeRange(-1, 0))
+            DispatchQueue.main.async {
+                self.textFiled.insertText(string + "\n", replacementRange: NSMakeRange(-1, 0))
+            }
         }
     }
 }

@@ -3,6 +3,9 @@ import Foundation
 public class SocketAppender: LogboardAppender {
     private var socket:NetSocket = NetSocket()
 
+    public init() {
+    }
+
     public func connect(_ name:String, port: Int) {
         socket.connect(withName: name, port: port)
     }
@@ -49,12 +52,17 @@ private class NetSocket: NSObject {
 
     func connect(withName:String, port:Int) {
         inputQueue.async {
-            Stream.getStreamsToHost(
-                withName: withName,
-                port: port,
-                inputStream: &self.inputStream,
-                outputStream: &self.outputStream
+            var readStream : Unmanaged<CFReadStream>?
+            var writeStream : Unmanaged<CFWriteStream>?
+            CFStreamCreatePairWithSocketToHost(
+                kCFAllocatorDefault,
+                withName as CFString,
+                UInt32(port),
+                &readStream,
+                &writeStream
             )
+            self.inputStream = readStream!.takeRetainedValue()
+            self.outputStream = writeStream!.takeRetainedValue()
             self.initConnection()
         }
     }
