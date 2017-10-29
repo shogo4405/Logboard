@@ -27,6 +27,18 @@
 		293875E31F374DFF009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875B71F35DB5C009F4B30 /* LogboardAppender.swift */; };
 		293875E51F374E04009F4B30 /* NullAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875C11F35DD77009F4B30 /* NullAppender.swift */; };
+		29CC69B61FA5CEE2005DF398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69B51FA5CEE2005DF398 /* AppDelegate.swift */; };
+		29CC69B81FA5CEE2005DF398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69B71FA5CEE2005DF398 /* ViewController.swift */; };
+		29CC69BA1FA5CEE2005DF398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CC69B91FA5CEE2005DF398 /* Assets.xcassets */; };
+		29CC69BD1FA5CEE2005DF398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CC69BB1FA5CEE2005DF398 /* Main.storyboard */; };
+		29CC69C41FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
+		29CC69C51FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
+		29CC69C61FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
+		29CC69C71FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
+		29CC69C91FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
+		29CC69CA1FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
+		29CC69CB1FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
+		29CC69CC1FA5D46B005DF398 /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C81FA5D46B005DF398 /* MultiAppender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +60,15 @@
 		293875CB1F370E7D009F4B30 /* Logboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		293875D81F3725F9009F4B30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		293875DA1F372601009F4B30 /* Logboard.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Logboard.podspec; sourceTree = "<group>"; };
+		29CC69B31FA5CEE2005DF398 /* LogboardConsole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogboardConsole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CC69B51FA5CEE2005DF398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29CC69B71FA5CEE2005DF398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29CC69B91FA5CEE2005DF398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29CC69BC1FA5CEE2005DF398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29CC69BE1FA5CEE2005DF398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CC69BF1FA5CEE2005DF398 /* LogboardConsole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LogboardConsole.entitlements; sourceTree = "<group>"; };
+		29CC69C31FA5CF58005DF398 /* SocketAppender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocketAppender.swift; path = Sources/SocketAppender.swift; sourceTree = "<group>"; };
+		29CC69C81FA5D46B005DF398 /* MultiAppender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MultiAppender.swift; path = Sources/MultiAppender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29CC69B01FA5CEE2005DF398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +116,7 @@
 				293875DA1F372601009F4B30 /* Logboard.podspec */,
 				293875D81F3725F9009F4B30 /* README.md */,
 				293875201F35D1AC009F4B30 /* Platforms */,
+				29CC69B41FA5CEE2005DF398 /* LogboardConsole */,
 				293874B61F359A3B009F4B30 /* Products */,
 				2938751F1F35D1A6009F4B30 /* Sources */,
 			);
@@ -100,6 +129,7 @@
 				293875591F35D51E009F4B30 /* Logboard.framework */,
 				293875A61F35D6A9009F4B30 /* Logboard.framework */,
 				293875CB1F370E7D009F4B30 /* Logboard.framework */,
+				29CC69B31FA5CEE2005DF398 /* LogboardConsole.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +140,9 @@
 				293875BC1F35DD1C009F4B30 /* ConsoleAppender.swift */,
 				293875251F35D21F009F4B30 /* Logboard.swift */,
 				293875B71F35DB5C009F4B30 /* LogboardAppender.swift */,
+				29CC69C81FA5D46B005DF398 /* MultiAppender.swift */,
 				293875C11F35DD77009F4B30 /* NullAppender.swift */,
+				29CC69C31FA5CF58005DF398 /* SocketAppender.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -160,6 +192,19 @@
 				293875621F35D564009F4B30 /* Logboard.h */,
 			);
 			name = watchOS;
+			sourceTree = "<group>";
+		};
+		29CC69B41FA5CEE2005DF398 /* LogboardConsole */ = {
+			isa = PBXGroup;
+			children = (
+				29CC69B51FA5CEE2005DF398 /* AppDelegate.swift */,
+				29CC69B91FA5CEE2005DF398 /* Assets.xcassets */,
+				29CC69BE1FA5CEE2005DF398 /* Info.plist */,
+				29CC69BF1FA5CEE2005DF398 /* LogboardConsole.entitlements */,
+				29CC69BB1FA5CEE2005DF398 /* Main.storyboard */,
+				29CC69B71FA5CEE2005DF398 /* ViewController.swift */,
+			);
+			path = LogboardConsole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,13 +317,30 @@
 			productReference = 293875CB1F370E7D009F4B30 /* Logboard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		29CC69B21FA5CEE2005DF398 /* LogboardConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CC69C01FA5CEE2005DF398 /* Build configuration list for PBXNativeTarget "LogboardConsole" */;
+			buildPhases = (
+				29CC69AF1FA5CEE2005DF398 /* Sources */,
+				29CC69B01FA5CEE2005DF398 /* Frameworks */,
+				29CC69B11FA5CEE2005DF398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogboardConsole;
+			productName = LogboardConsole;
+			productReference = 29CC69B31FA5CEE2005DF398 /* LogboardConsole.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		293874AC1F359A3B009F4B30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
@@ -302,6 +364,10 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
+					29CC69B21FA5CEE2005DF398 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 293874AF1F359A3B009F4B30 /* Build configuration list for PBXProject "Logboard" */;
@@ -310,6 +376,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 293874AB1F359A3B009F4B30;
 			productRefGroup = 293874B61F359A3B009F4B30 /* Products */;
@@ -320,6 +387,7 @@
 				293875581F35D51E009F4B30 /* Logboard watchOS */,
 				293875A51F35D6A9009F4B30 /* Logboard macOS */,
 				293875CA1F370E7D009F4B30 /* Logboard tvOS */,
+				29CC69B21FA5CEE2005DF398 /* LogboardConsole */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +421,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29CC69B11FA5CEE2005DF398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CC69BA1FA5CEE2005DF398 /* Assets.xcassets in Resources */,
+				29CC69BD1FA5CEE2005DF398 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,7 +437,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CC69C41FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875B81F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
+				29CC69C91FA5D46B005DF398 /* MultiAppender.swift in Sources */,
 				293875BD1F35DD1C009F4B30 /* ConsoleAppender.swift in Sources */,
 				293875C21F35DD77009F4B30 /* NullAppender.swift in Sources */,
 				293875AE1F35D746009F4B30 /* Logboard.swift in Sources */,
@@ -371,7 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CC69C51FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875B91F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
+				29CC69CA1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
 				293875BE1F35DD1C009F4B30 /* ConsoleAppender.swift in Sources */,
 				293875C31F35DD77009F4B30 /* NullAppender.swift in Sources */,
 				293875AF1F35D747009F4B30 /* Logboard.swift in Sources */,
@@ -382,7 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CC69C61FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875BB1F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
+				29CC69CB1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
 				293875C01F35DD1C009F4B30 /* ConsoleAppender.swift in Sources */,
 				293875C51F35DD77009F4B30 /* NullAppender.swift in Sources */,
 				293875B11F35D748009F4B30 /* Logboard.swift in Sources */,
@@ -393,14 +476,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CC69C71FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875E21F374DFC009F4B30 /* ConsoleAppender.swift in Sources */,
+				29CC69CC1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
 				293875E31F374DFF009F4B30 /* Logboard.swift in Sources */,
 				293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */,
 				293875E51F374E04009F4B30 /* NullAppender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29CC69AF1FA5CEE2005DF398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CC69B81FA5CEE2005DF398 /* ViewController.swift in Sources */,
+				29CC69B61FA5CEE2005DF398 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29CC69BB1FA5CEE2005DF398 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CC69BC1FA5CEE2005DF398 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		293874C71F359A3B009F4B30 /* Debug */ = {
@@ -446,6 +551,7 @@
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -500,6 +606,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -700,6 +807,48 @@
 			};
 			name = Release;
 		};
+		29CC69C11FA5CEE2005DF398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = LogboardConsole/LogboardConsole.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LogboardConsole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.LogboardConsole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		29CC69C21FA5CEE2005DF398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = LogboardConsole/LogboardConsole.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LogboardConsole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.LogboardConsole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -744,6 +893,15 @@
 			buildConfigurations = (
 				293875D11F370E7D009F4B30 /* Debug */,
 				293875D21F370E7D009F4B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CC69C01FA5CEE2005DF398 /* Build configuration list for PBXNativeTarget "LogboardConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CC69C11FA5CEE2005DF398 /* Debug */,
+				29CC69C21FA5CEE2005DF398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
