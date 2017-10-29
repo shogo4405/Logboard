@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2921F09B1FA5EE8900EEF1F4 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F09A1FA5EE8900EEF1F4 /* NetService.swift */; };
+		2921F09D1FA5EEB300EEF1F4 /* NetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F09C1FA5EEB300EEF1F4 /* NetClient.swift */; };
+		2921F09F1FA5EEDE00EEF1F4 /* NetSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F09E1FA5EEDE00EEF1F4 /* NetSocket.swift */; };
+		2921F0A11FA5EFD500EEF1F4 /* LogboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921F0A01FA5EFD500EEF1F4 /* LogboardService.swift */; };
 		293875AE1F35D746009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875AF1F35D747009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
 		293875B11F35D748009F4B30 /* Logboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875251F35D21F009F4B30 /* Logboard.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2921F09A1FA5EE8900EEF1F4 /* NetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
+		2921F09C1FA5EEB300EEF1F4 /* NetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetClient.swift; sourceTree = "<group>"; };
+		2921F09E1FA5EEDE00EEF1F4 /* NetSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetSocket.swift; sourceTree = "<group>"; };
+		2921F0A01FA5EFD500EEF1F4 /* LogboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogboardService.swift; sourceTree = "<group>"; };
 		293875251F35D21F009F4B30 /* Logboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logboard.swift; path = Sources/Logboard.swift; sourceTree = "<group>"; };
 		2938752A1F35D39B009F4B30 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/macOS/Info.plist; sourceTree = "<group>"; };
 		2938752B1F35D39B009F4B30 /* Logboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logboard.h; path = Platforms/macOS/Logboard.h; sourceTree = "<group>"; };
@@ -201,7 +209,11 @@
 				29CC69B91FA5CEE2005DF398 /* Assets.xcassets */,
 				29CC69BE1FA5CEE2005DF398 /* Info.plist */,
 				29CC69BF1FA5CEE2005DF398 /* LogboardConsole.entitlements */,
+				2921F0A01FA5EFD500EEF1F4 /* LogboardService.swift */,
 				29CC69BB1FA5CEE2005DF398 /* Main.storyboard */,
+				2921F09C1FA5EEB300EEF1F4 /* NetClient.swift */,
+				2921F09A1FA5EE8900EEF1F4 /* NetService.swift */,
+				2921F09E1FA5EEDE00EEF1F4 /* NetSocket.swift */,
 				29CC69B71FA5CEE2005DF398 /* ViewController.swift */,
 			);
 			path = LogboardConsole;
@@ -489,8 +501,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2921F09D1FA5EEB300EEF1F4 /* NetClient.swift in Sources */,
 				29CC69B81FA5CEE2005DF398 /* ViewController.swift in Sources */,
 				29CC69B61FA5CEE2005DF398 /* AppDelegate.swift in Sources */,
+				2921F09F1FA5EEDE00EEF1F4 /* NetSocket.swift in Sources */,
+				2921F09B1FA5EE8900EEF1F4 /* NetService.swift in Sources */,
+				2921F0A11FA5EFD500EEF1F4 /* LogboardService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
