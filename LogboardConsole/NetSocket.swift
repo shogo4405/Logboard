@@ -1,35 +1,6 @@
 import Foundation
 
-public class SocketAppender: LogboardAppender {
-    private var socket:NetSocket = NetSocket()
-
-    public init() {
-    }
-
-    public func connect(_ name:String, port: Int) {
-        socket.connect(withName: name, port: port)
-    }
-
-    public func close() {
-        socket.close(isDisconnected: false)
-    }
-
-    public func append(_ logboard:Logboard, level: Logboard.Level, message:String, file:StaticString, function:StaticString, line:Int) {
-        let string = "[\(level)][\(logboard.identifier)][\(line)]\(function)>\(message)"
-        if let data:Data = string.data(using: .utf8) {
-            socket.doOutput(data: data)
-        }
-    }
-
-    public func append(_ logboard:Logboard, level: Logboard.Level, format:String, arguments:CVarArg, file:StaticString, function:StaticString, line:Int) {
-        let string = "[\(level)][\(logboard.identifier)][\(line)]\(function)>" + String(format: format, arguments)
-        if let data:Data = string.data(using: .utf8) {
-            socket.doOutput(data: data)
-        }
-    }
-}
-
-private class NetSocket: NSObject {
+public class NetSocket: NSObject {
     static let defaultTimeout:Int64 = 15 // sec
     static let defaultWindowSizeC:Int = Int(UInt16.max)
     
@@ -41,28 +12,14 @@ private class NetSocket: NSObject {
     var outputStream:OutputStream?
     var inputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.input")
     var securityLevel:StreamSocketSecurityLevel = .none
+    var totalBytesIn:Int64 = 0
+    private(set) var totalBytesOut:Int64 = 0
+    private(set) var queueBytesOut:Int64 = 0
     
     private var buffer:UnsafeMutablePointer<UInt8>? = nil
     private var runloop:RunLoop?
     private let outputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.output")
     fileprivate var timeoutHandler:(() -> Void)?
-
-    func connect(withName:String, port:Int) {
-        inputQueue.async {
-            var readStream : Unmanaged<CFReadStream>?
-            var writeStream : Unmanaged<CFWriteStream>?
-            CFStreamCreatePairWithSocketToHost(
-                kCFAllocatorDefault,
-                withName as CFString,
-                UInt32(port),
-                &readStream,
-                &writeStream
-            )
-            self.inputStream = readStream!.takeRetainedValue()
-            self.outputStream = writeStream!.takeRetainedValue()
-            self.initConnection()
-        }
-    }
     
     @discardableResult
     final public func doOutput(data:Data, locked:UnsafeMutablePointer<UInt32>? = nil) -> Int {
@@ -72,6 +29,28 @@ private class NetSocket: NSObject {
             }
         }
         return data.count
+    }
+    
+    final func doOutputFromURL(_ url:URL, length:Int) {
+        outputQueue.async {
+            do {
+                let fileHandle:FileHandle = try FileHandle(forReadingFrom: url)
+                defer {
+                    fileHandle.closeFile()
+                }
+                let endOfFile:Int = Int(fileHandle.seekToEndOfFile())
+                for i in 0..<Int(endOfFile / length) {
+                    fileHandle.seek(toFileOffset: UInt64(i * length))
+                    self.doOutputProcess(fileHandle.readData(ofLength: length))
+                }
+                let remain:Int = endOfFile % length
+                if (0 < remain) {
+                    self.doOutputProcess(fileHandle.readData(ofLength: remain))
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+        }
     }
     
     final func doOutputProcess(_ data:Data) {
@@ -91,9 +70,10 @@ private class NetSocket: NSObject {
                 break
             }
             total += length
+            totalBytesOut += Int64(length)
         }
     }
-
+    
     func close(isDisconnected:Bool) {
         outputQueue.async {
             guard let runloop:RunLoop = self.runloop else {
@@ -104,14 +84,17 @@ private class NetSocket: NSObject {
             CFRunLoopStop(runloop.getCFRunLoop())
         }
     }
-
+    
     func listen() {
     }
-
+    
     func initConnection() {
         buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: windowSizeC)
         buffer?.initialize(to: 0, count: windowSizeC)
-
+        
+        totalBytesIn = 0
+        totalBytesOut = 0
+        queueBytesOut = 0
         timeoutHandler = didTimeout
         inputBuffer.removeAll(keepingCapacity: false)
         
@@ -158,16 +141,17 @@ private class NetSocket: NSObject {
         buffer?.deallocate(capacity: windowSizeC)
         buffer = nil
     }
-
+    
     func didTimeout() {
     }
-
+    
     fileprivate func doInput() {
         guard let inputStream:InputStream = inputStream, let buffer:UnsafeMutablePointer<UInt8> = buffer else {
             return
         }
         let length:Int = inputStream.read(buffer, maxLength: windowSizeC)
         if 0 < length {
+            totalBytesIn += Int64(length)
             inputBuffer.append(buffer, count: length)
             listen()
         }
@@ -207,4 +191,3 @@ extension NetSocket: StreamDelegate {
         }
     }
 }
-
