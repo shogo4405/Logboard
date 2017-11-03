@@ -70,10 +70,6 @@ socket.connect("toHost", 22222)
 logger.appender = socket
 ```
 
-[Build Target] -> [LogboardConsole]
-
-![socketwindow](https://github.com/shogo4405/Logboard/blob/master/README/socketwindow.gif)
-
 ## License
 New BSD
 
