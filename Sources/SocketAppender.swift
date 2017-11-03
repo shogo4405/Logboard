@@ -1,6 +1,12 @@
 import Foundation
 
 public class SocketAppender: LogboardAppender {
+    private var dateFormatter:DateFormatter = {
+        let dateFormatter:DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy hh:mma"
+        dateFormatter.locale = .current
+        return dateFormatter
+    }()
     private var socket:NetSocket = NetSocket()
 
     public init() {
@@ -15,15 +21,15 @@ public class SocketAppender: LogboardAppender {
     }
 
     public func append(_ logboard:Logboard, level: Logboard.Level, message:String, file:StaticString, function:StaticString, line:Int) {
-        let string = "[\(level)][\(logboard.identifier)][\(line)]\(function)>\(message)"
-        if let data:Data = string.data(using: .utf8) {
+        let strings:[String] = [dateFormatter.string(from: Date()), level.description, logboard.identifier, String(line), function.description, message]
+        if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
             socket.doOutput(data: data)
         }
     }
 
     public func append(_ logboard:Logboard, level: Logboard.Level, format:String, arguments:CVarArg, file:StaticString, function:StaticString, line:Int) {
-        let string = "[\(level)][\(logboard.identifier)][\(line)]\(function)>" + String(format: format, arguments)
-        if let data:Data = string.data(using: .utf8) {
+        let strings:[String] = [dateFormatter.string(from: Date()), level.description, logboard.identifier, String(line), function.description, String(format: format, arguments)]
+        if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
             socket.doOutput(data: data)
         }
     }
@@ -32,7 +38,7 @@ public class SocketAppender: LogboardAppender {
 private class NetSocket: NSObject {
     static let defaultTimeout:Int64 = 15 // sec
     static let defaultWindowSizeC:Int = Int(UInt16.max)
-    
+
     var timeout:Int64 = NetSocket.defaultTimeout
     var connected:Bool = false
     var inputBuffer:Data = Data()
@@ -41,7 +47,7 @@ private class NetSocket: NSObject {
     var outputStream:OutputStream?
     var inputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.input")
     var securityLevel:StreamSocketSecurityLevel = .none
-    
+
     private var buffer:UnsafeMutablePointer<UInt8>? = nil
     private var runloop:RunLoop?
     private let outputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.output")
@@ -131,7 +137,7 @@ private class NetSocket: NSObject {
         
         inputStream.open()
         outputStream.open()
-        
+
         if (0 < timeout) {
             outputQueue.asyncAfter(deadline: DispatchTime.now() + Double(timeout * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
                 guard let timeoutHandler:(() -> Void) = self.timeoutHandler else {
