@@ -48,14 +48,14 @@ github "shogo4405/Logboard" ~> 1.1.0
 ## Appenders
 ### ConsoleAppender
 Use print function. You can see XCode's console.
-```
+```swift
 let logger = Logboard.with("identifier")
 let console = ConsoleAppender()
 logger.appender = console
 ```
 
 ### MultiAppender
-```
+```swift
 let logger = Logboard.with("identifier")
 let multi = MultiAppender()
 multi.appenders.append(ConsoleAppender())
@@ -64,7 +64,7 @@ logger.appender = multi
 ```
 
 ### SocketAppender
-```
+```swift
 let logger = Logboard.with("identifier")
 let socket = SocketAppender()
 socket.connect("toHost", 22222)
