@@ -25,6 +25,7 @@ logger.error("error")
 |1.0.0|8.0+|10.9+|9.0+|2.0|8.3+|3.1|1.2.0|0.20.0+|
 
 ## Installation
+*Please set up your project Swift 4.0.*
 ### CocoaPods
 ```rb
 source 'https://github.com/CocoaPods/Specs.git'
