@@ -25,6 +25,6 @@ extension Logboard {
 
 extension Logboard.Data: CustomStringConvertible {
     public var description:String {
-        return "\(Logboard.dateFormatter.string(from: date)), [\(level)], [\(identifier)], [\(file):\(line)], \(function) > \(message)"
+        return "\(Logboard.dateFormatter.string(from: date)) [\(level)] [\(identifier)] [\(filename(file)):\(line)] \(function) > \(message)"
     }
 }

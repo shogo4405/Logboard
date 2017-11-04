@@ -1,9 +1,13 @@
 import Foundation
 
+func filename(_ file:String) -> String {
+    return file.components(separatedBy: "/").last ?? file
+}
+
 public class Logboard {
     static public let dateFormatter:DateFormatter = {
         let dateFormatter:DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-dd-MM hh:mm"
+        dateFormatter.dateFormat = "yyyy-dd-MM HH:mm:ss.SSS"
         return dateFormatter
     }()
 
@@ -13,6 +17,8 @@ public class Logboard {
         case info  = 2
         case warn  = 3
         case error = 4
+
+        static public let allValues:[Level] = [.trace, .debug, .info, .warn, .error]
 
         public init?(string: String) {
             switch string {
@@ -24,7 +30,7 @@ public class Logboard {
                 self = .info
             case "Warn":
                 self = .warn
-            case "error":
+            case "Error":
                 self = .error
             default:
                 return nil
