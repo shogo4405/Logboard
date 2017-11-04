@@ -1,12 +1,35 @@
 import Foundation
 
 public class Logboard {
+    static public let dateFormatter:DateFormatter = {
+        let dateFormatter:DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-dd-MM hh:mm"
+        return dateFormatter
+    }()
+
     public enum Level: Int, CustomStringConvertible {
-        case trace
-        case debug
-        case info
-        case warn
-        case error
+        case trace = 0
+        case debug = 1
+        case info  = 2
+        case warn  = 3
+        case error = 4
+
+        public init?(string: String) {
+            switch string {
+            case "Trace":
+                self = .trace
+            case "Debug":
+                self = .debug
+            case "Info":
+                self = .info
+            case "Warn":
+                self = .warn
+            case "error":
+                self = .error
+            default:
+                return nil
+            }
+        }
 
         public var description: String {
             switch self {

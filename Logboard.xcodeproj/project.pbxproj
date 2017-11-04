@@ -28,6 +28,10 @@
 		293875E41F374E01009F4B30 /* LogboardAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875B71F35DB5C009F4B30 /* LogboardAppender.swift */; };
 		293875E51F374E04009F4B30 /* NullAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293875C11F35DD77009F4B30 /* NullAppender.swift */; };
 		296708FD1FA60DC400278D68 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
+		29C4D5721FAD431700978193 /* Logboard.Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5711FAD431700978193 /* Logboard.Data.swift */; };
+		29C4D5731FAD431700978193 /* Logboard.Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5711FAD431700978193 /* Logboard.Data.swift */; };
+		29C4D5741FAD431700978193 /* Logboard.Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5711FAD431700978193 /* Logboard.Data.swift */; };
+		29C4D5751FAD431700978193 /* Logboard.Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5711FAD431700978193 /* Logboard.Data.swift */; };
 		29CC69C41FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69C61FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
 		29CC69C71FA5CF58005DF398 /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC69C31FA5CF58005DF398 /* SocketAppender.swift */; };
@@ -56,6 +60,7 @@
 		293875CB1F370E7D009F4B30 /* Logboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		293875D81F3725F9009F4B30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		293875DA1F372601009F4B30 /* Logboard.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Logboard.podspec; sourceTree = "<group>"; };
+		29C4D5711FAD431700978193 /* Logboard.Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logboard.Data.swift; path = Sources/Logboard.Data.swift; sourceTree = "<group>"; };
 		29CC69C31FA5CF58005DF398 /* SocketAppender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocketAppender.swift; path = Sources/SocketAppender.swift; sourceTree = "<group>"; };
 		29CC69C81FA5D46B005DF398 /* MultiAppender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MultiAppender.swift; path = Sources/MultiAppender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				293875BC1F35DD1C009F4B30 /* ConsoleAppender.swift */,
+				29C4D5711FAD431700978193 /* Logboard.Data.swift */,
 				293875251F35D21F009F4B30 /* Logboard.swift */,
 				293875B71F35DB5C009F4B30 /* LogboardAppender.swift */,
 				29CC69C81FA5D46B005DF398 /* MultiAppender.swift */,
@@ -381,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C4D5721FAD431700978193 /* Logboard.Data.swift in Sources */,
 				29CC69C41FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875B81F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
 				29CC69C91FA5D46B005DF398 /* MultiAppender.swift in Sources */,
@@ -394,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C4D5731FAD431700978193 /* Logboard.Data.swift in Sources */,
 				293875B91F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
 				296708FD1FA60DC400278D68 /* SocketAppender.swift in Sources */,
 				29CC69CA1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
@@ -407,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C4D5741FAD431700978193 /* Logboard.Data.swift in Sources */,
 				29CC69C61FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875BB1F35DB5C009F4B30 /* LogboardAppender.swift in Sources */,
 				29CC69CB1FA5D46B005DF398 /* MultiAppender.swift in Sources */,
@@ -420,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C4D5751FAD431700978193 /* Logboard.Data.swift in Sources */,
 				29CC69C71FA5CF58005DF398 /* SocketAppender.swift in Sources */,
 				293875E21F374DFC009F4B30 /* ConsoleAppender.swift in Sources */,
 				29CC69CC1FA5D46B005DF398 /* MultiAppender.swift in Sources */,

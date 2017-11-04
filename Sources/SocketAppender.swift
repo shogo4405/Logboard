@@ -1,12 +1,6 @@
 import Foundation
 
 public class SocketAppender: LogboardAppender {
-    private var dateFormatter:DateFormatter = {
-        let dateFormatter:DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy hh:mma"
-        dateFormatter.locale = .current
-        return dateFormatter
-    }()
     private var socket:NetSocket = NetSocket()
 
     public init() {
@@ -21,14 +15,14 @@ public class SocketAppender: LogboardAppender {
     }
 
     public func append(_ logboard:Logboard, level: Logboard.Level, message:String, file:StaticString, function:StaticString, line:Int) {
-        let strings:[String] = [dateFormatter.string(from: Date()), level.description, logboard.identifier, String(line), function.description, message]
+        let strings:[String] = [Logboard.dateFormatter.string(from: Date()), level.description, logboard.identifier, file.description, String(line), function.description, message]
         if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
             socket.doOutput(data: data)
         }
     }
 
     public func append(_ logboard:Logboard, level: Logboard.Level, format:String, arguments:CVarArg, file:StaticString, function:StaticString, line:Int) {
-        let strings:[String] = [dateFormatter.string(from: Date()), level.description, logboard.identifier, String(line), function.description, String(format: format, arguments)]
+        let strings:[String] = [Logboard.dateFormatter.string(from: Date()), level.description, logboard.identifier, file.description, String(line), function.description, String(format: format, arguments)]
         if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
             socket.doOutput(data: data)
         }
