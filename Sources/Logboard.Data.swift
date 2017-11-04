@@ -6,8 +6,8 @@ extension Logboard {
         public var level:Level
         public var identifier:String
         public var file:String
-        public var function:String
         public var line:Int
+        public var function:String
         public var message:String
 
         public init(_ data:Foundation.Data) {
@@ -16,8 +16,8 @@ extension Logboard {
             level = Level(string: String(strings[1])) ?? .trace
             identifier = String(strings[2])
             file = String(strings[3])
-            function = String(strings[4])
-            line = Int(String(strings[5])) ?? 0
+            line = Int(String(strings[4])) ?? 0
+            function = String(strings[5])
             message = String(strings[6])
         }
     }
