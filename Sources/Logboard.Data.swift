@@ -10,8 +10,10 @@ extension Logboard {
         public var function:String
         public var message:String
 
-        public init(_ data:Foundation.Data) {
-            let strings = String(bytes: data, encoding: .utf8)?.split(separator: "\t") ?? []
+        public init?(_ data:Foundation.Data) {
+            guard let strings:[String.SubSequence] = String(bytes: data, encoding: .utf8)?.split(separator: "\t"), 7 <= strings.count else {
+                return nil
+            }
             date = Logboard.dateFormatter.date(from: String(strings[0])) ?? Date()
             level = Level(string: String(strings[1])) ?? .trace
             identifier = String(strings[2])
