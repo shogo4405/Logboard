@@ -2,7 +2,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
 ![Language](https://img.shields.io/badge/language-Swift%204.0-orange.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
-[![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://raw.githubusercontent.com/shogo4405/lf.swift/master/LICENSE.txt)
+[![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/shogo4405/Logboard/blob/master/LICENSE.md)
 
 Simple logging framework for your framework project.
 
@@ -72,7 +72,7 @@ logger.appender = socket
 ```
 
 ## License
-New BSD
+BSD-3-Clause
 
 ## Donation
 Bitcoin
