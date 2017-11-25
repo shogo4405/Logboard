@@ -20,7 +20,7 @@ extension Logboard {
             file = String(strings[3])
             line = Int(String(strings[4])) ?? 0
             function = String(strings[5])
-            message = String(strings[6])
+            message = strings[6...].joined(separator: "\t")
         }
     }
 }
