@@ -1,12 +1,12 @@
 import Foundation
 
-func filename(_ file:String) -> String {
+func filename(_ file: String) -> String {
     return file.components(separatedBy: "/").last ?? file
 }
 
 public class Logboard {
-    static public let dateFormatter:DateFormatter = {
-        let dateFormatter:DateFormatter = DateFormatter()
+    static public let dateFormatter: DateFormatter = {
+        let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-dd-MM HH:mm:ss.SSS"
         return dateFormatter
     }()
@@ -17,8 +17,6 @@ public class Logboard {
         case info  = 2
         case warn  = 3
         case error = 4
-
-        static public let allValues:[Level] = [.trace, .debug, .info, .warn, .error]
 
         public init?(string: String) {
             switch string {
@@ -53,64 +51,64 @@ public class Logboard {
         }
     }
 
-    private static var instances:[String:Logboard] = [:]
+    private static var instances: [String: Logboard] = [:]
 
-    public static func with(_ identifier:String) -> Logboard {
+    public static func with(_ identifier: String) -> Logboard {
         if instances[identifier] == nil {
             instances[identifier] = Logboard(identifier)
         }
         return instances[identifier]!
     }
 
-    public let identifier:String
-    public var level:Logboard.Level = .info
-    public var appender:LogboardAppender = ConsoleAppender()
+    public let identifier: String
+    public var level: Logboard.Level = .info
+    public var appender: LogboardAppender = ConsoleAppender()
 
-    public init(_ identifier:String) {
+    public init(_ identifier: String) {
         self.identifier = identifier
     }
 
-    public func isEnabledFor(level:Logboard.Level) -> Bool {
+    public func isEnabledFor(level: Logboard.Level) -> Bool {
         return self.level.rawValue <= level.rawValue
     }
 
-    public func trace(_ message:String, file:StaticString = #file, function:StaticString = #function, line:Int = #line) {
-        appender.append(self, level:.trace, message: message, file: file, function: function, line: line)
+    public func trace(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .trace, message: message, file: file, function: function, line: line)
     }
 
-    public func trace(format:String, arguments:CVarArg, file:StaticString = #file, function:StaticString = #function, line: Int = #line) {
-        appender.append(self, level:.trace, format: format, arguments: arguments, file: file, function: function, line: line)
+    public func trace(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .trace, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func debug(_ message:String, file:StaticString = #file, function:StaticString = #function, line:Int = #line) {
-        appender.append(self, level:.debug, message: message, file: file, function: function, line: line)
+    public func debug(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .debug, message: message, file: file, function: function, line: line)
     }
 
-    public func debug(format:String, arguments:CVarArg, file:StaticString = #file, function:StaticString = #function, line: Int = #line) {
-        appender.append(self, level:.debug, format: format, arguments: arguments, file: file, function: function, line: line)
+    public func debug(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .debug, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func info(_ message:String, file:StaticString = #file, function:StaticString = #function, line:Int = #line) {
-        appender.append(self, level:.info, message: message, file: file, function: function, line: line)
-    }
-    
-    public func info(format:String, arguments:CVarArg, file:StaticString = #file, function:StaticString = #function, line: Int = #line) {
-        appender.append(self, level:.info, format: format, arguments: arguments, file: file, function: function, line: line)
+    public func info(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .info, message: message, file: file, function: function, line: line)
     }
 
-    public func warn(_ message:String, file:StaticString = #file, function:StaticString = #function, line:Int = #line) {
-        appender.append(self, level:.warn, message: message, file: file, function: function, line: line)
-    }
-    
-    public func warn(format:String, arguments:CVarArg, file:StaticString = #file, function:StaticString = #function, line: Int = #line) {
-        appender.append(self, level:.warn, format: format, arguments: arguments, file: file, function: function, line: line)
+    public func info(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .info, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func error(_ message:String, file:StaticString = #file, function:StaticString = #function, line:Int = #line) {
-        appender.append(self, level:.error, message: message, file: file, function: function, line: line)
+    public func warn(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .warn, message: message, file: file, function: function, line: line)
     }
-    
-    public func error(format:String, arguments:CVarArg, file:StaticString = #file, function:StaticString = #function, line: Int = #line) {
-        appender.append(self, level:.error, format: format, arguments: arguments, file: file, function: function, line: line)
+
+    public func warn(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .warn, format: format, arguments: arguments, file: file, function: function, line: line)
+    }
+
+    public func error(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .error, message: message, file: file, function: function, line: line)
+    }
+
+    public func error(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+        appender.append(self, level: .error, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 }

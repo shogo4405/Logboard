@@ -1,12 +1,12 @@
 import Foundation
 
 public class MultiAppender: LogboardAppender {
-    public var appenders:[LogboardAppender] = []
+    public var appenders: [LogboardAppender] = []
 
     public init() {
     }
 
-    public func append(_ logboard:Logboard, level: Logboard.Level, message:String, file:StaticString, function:StaticString, line:Int) {
+    public func append(_ logboard: Logboard, level: Logboard.Level, message: String, file: StaticString, function: StaticString, line: Int) {
         for appender in appenders {
             appender.append(logboard, level: level, message: message, file: file, function: function, line: line)
         }

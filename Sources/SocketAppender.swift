@@ -1,12 +1,12 @@
 import Foundation
 
 public class SocketAppender: LogboardAppender {
-    private var socket:NetSocket = NetSocket()
+    private var socket: NetSocket = NetSocket()
 
     public init() {
     }
 
-    public func connect(_ name:String, port: Int) {
+    public func connect(_ name: String, port: Int) {
         socket.connect(withName: name, port: port)
     }
 
@@ -14,43 +14,59 @@ public class SocketAppender: LogboardAppender {
         socket.close(isDisconnected: false)
     }
 
-    public func append(_ logboard:Logboard, level: Logboard.Level, message:String, file:StaticString, function:StaticString, line:Int) {
-        let strings:[String] = [Logboard.dateFormatter.string(from: Date()), level.description, logboard.identifier, file.description, String(line), function.description, message]
-        if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
+    public func append(_ logboard: Logboard, level: Logboard.Level, message: String, file: StaticString, function: StaticString, line: Int) {
+        let strings: [String] = [
+            Logboard.dateFormatter.string(from: Date()),
+            level.description,
+            logboard.identifier,
+            file.description,
+            String(line),
+            function.description,
+            message
+        ]
+        if let data: Data = (strings.joined(separator: "\t") + "\r\n\r\n").data(using: .utf8) {
             socket.doOutput(data: data)
         }
     }
 
-    public func append(_ logboard:Logboard, level: Logboard.Level, format:String, arguments:CVarArg, file:StaticString, function:StaticString, line:Int) {
-        let strings:[String] = [Logboard.dateFormatter.string(from: Date()), level.description, logboard.identifier, file.description, String(line), function.description, String(format: format, arguments)]
-        if let data:Data = strings.joined(separator: "\t").data(using: .utf8) {
+    public func append(_ logboard: Logboard, level: Logboard.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
+        let strings: [String] = [
+            Logboard.dateFormatter.string(from: Date()),
+            level.description,
+            logboard.identifier,
+            file.description,
+            String(line),
+            function.description,
+            String(format: format, arguments)
+        ]
+        if let data: Data = (strings.joined(separator: "\t") + "\r\n\r\n").data(using: .utf8) {
             socket.doOutput(data: data)
         }
     }
 }
 
 private class NetSocket: NSObject {
-    static let defaultTimeout:Int64 = 15 // sec
-    static let defaultWindowSizeC:Int = Int(UInt16.max)
+    static let defaultTimeout: Int64 = 15 // sec
+    static let defaultWindowSizeC: Int = Int(UInt16.max)
 
-    var timeout:Int64 = NetSocket.defaultTimeout
-    var connected:Bool = false
-    var inputBuffer:Data = Data()
-    var inputStream:InputStream?
-    var windowSizeC:Int = NetSocket.defaultWindowSizeC
-    var outputStream:OutputStream?
-    var inputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.input")
-    var securityLevel:StreamSocketSecurityLevel = .none
+    var timeout: Int64 = NetSocket.defaultTimeout
+    var connected: Bool = false
+    var inputBuffer: Data = Data()
+    var inputStream: InputStream?
+    var windowSizeC: Int = NetSocket.defaultWindowSizeC
+    var outputStream: OutputStream?
+    var inputQueue: DispatchQueue = DispatchQueue(label: "com.github.shogo4405.Logboard.input")
+    var securityLevel: StreamSocketSecurityLevel = .none
 
-    private var buffer:UnsafeMutablePointer<UInt8>? = nil
-    private var runloop:RunLoop?
-    private let outputQueue:DispatchQueue = DispatchQueue(label: "com.haishinkit.HaishinKit.NetSocket.output")
+    private var buffer: UnsafeMutablePointer<UInt8>?
+    private var runloop: RunLoop?
+    private let outputQueue: DispatchQueue = DispatchQueue(label: "com.github.shogo4405.Logboard.output")
     fileprivate var timeoutHandler:(() -> Void)?
 
-    func connect(withName:String, port:Int) {
+    func connect(withName: String, port: Int) {
         inputQueue.async {
-            var readStream : Unmanaged<CFReadStream>?
-            var writeStream : Unmanaged<CFWriteStream>?
+            var readStream: Unmanaged<CFReadStream>?
+            var writeStream: Unmanaged<CFWriteStream>?
             CFStreamCreatePairWithSocketToHost(
                 kCFAllocatorDefault,
                 withName as CFString,
@@ -63,30 +79,30 @@ private class NetSocket: NSObject {
             self.initConnection()
         }
     }
-    
+
     @discardableResult
-    final public func doOutput(data:Data, locked:UnsafeMutablePointer<UInt32>? = nil) -> Int {
+    final public func doOutput(data: Data, locked: UnsafeMutablePointer<UInt32>? = nil) -> Int {
         outputQueue.async {
-            data.withUnsafeBytes { (buffer:UnsafePointer<UInt8>) -> Void in
+            data.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) -> Void in
                 self.doOutputProcess(buffer, maxLength: data.count)
             }
         }
         return data.count
     }
-    
-    final func doOutputProcess(_ data:Data) {
-        data.withUnsafeBytes { (buffer:UnsafePointer<UInt8>) -> Void in
+
+    final func doOutputProcess(_ data: Data) {
+        data.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) -> Void in
             doOutputProcess(buffer, maxLength: data.count)
         }
     }
-    
-    final func doOutputProcess(_ buffer:UnsafePointer<UInt8>, maxLength:Int) {
-        guard let outputStream:OutputStream = outputStream else {
+
+    final func doOutputProcess(_ buffer: UnsafePointer<UInt8>, maxLength: Int) {
+        guard let outputStream: OutputStream = outputStream else {
             return
         }
-        var total:Int = 0
+        var total: Int = 0
         while total < maxLength {
-            let length:Int = outputStream.write(buffer.advanced(by: total), maxLength: maxLength - total)
+            let length: Int = outputStream.write(buffer.advanced(by: total), maxLength: maxLength - total)
             if (length <= 0) {
                 break
             }
@@ -94,9 +110,9 @@ private class NetSocket: NSObject {
         }
     }
 
-    func close(isDisconnected:Bool) {
+    func close(isDisconnected: Bool) {
         outputQueue.async {
-            guard let runloop:RunLoop = self.runloop else {
+            guard let runloop: RunLoop = self.runloop else {
                 return
             }
             self.deinitConnection(isDisconnected: isDisconnected)
@@ -114,25 +130,25 @@ private class NetSocket: NSObject {
 
         timeoutHandler = didTimeout
         inputBuffer.removeAll(keepingCapacity: false)
-        
-        guard let inputStream:InputStream = inputStream, let outputStream:OutputStream = outputStream else {
+
+        guard let inputStream: InputStream = inputStream, let outputStream: OutputStream = outputStream else {
             return
         }
-        
+
         runloop = .current
-        
+
         inputStream.delegate = self
         inputStream.schedule(in: runloop!, forMode: .defaultRunLoopMode)
         inputStream.setProperty(securityLevel.rawValue, forKey: Stream.PropertyKey.socketSecurityLevelKey)
-        
+
         outputStream.delegate = self
         outputStream.schedule(in: runloop!, forMode: .defaultRunLoopMode)
         outputStream.setProperty(securityLevel.rawValue, forKey: Stream.PropertyKey.socketSecurityLevelKey)
-        
+
         inputStream.open()
         outputStream.open()
 
-        if (0 < timeout) {
+        if 0 < timeout {
             outputQueue.asyncAfter(deadline: DispatchTime.now() + Double(timeout * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
                 guard let timeoutHandler:(() -> Void) = self.timeoutHandler else {
                     return
@@ -140,12 +156,12 @@ private class NetSocket: NSObject {
                 timeoutHandler()
             }
         }
-        
+
         runloop?.run()
         connected = false
     }
-    
-    func deinitConnection(isDisconnected:Bool) {
+
+    func deinitConnection(isDisconnected: Bool) {
         inputStream?.close()
         inputStream?.remove(from: runloop!, forMode: .defaultRunLoopMode)
         inputStream?.delegate = nil
@@ -163,10 +179,10 @@ private class NetSocket: NSObject {
     }
 
     fileprivate func doInput() {
-        guard let inputStream:InputStream = inputStream, let buffer:UnsafeMutablePointer<UInt8> = buffer else {
+        guard let inputStream: InputStream = inputStream, let buffer: UnsafeMutablePointer<UInt8> = buffer else {
             return
         }
-        let length:Int = inputStream.read(buffer, maxLength: windowSizeC)
+        let length: Int = inputStream.read(buffer, maxLength: windowSizeC)
         if 0 < length {
             inputBuffer.append(buffer, count: length)
             listen()
@@ -184,13 +200,13 @@ extension NetSocket: StreamDelegate {
                 inputStream.streamStatus == .open && outputStream.streamStatus == .open else {
                     break
             }
-            if (aStream == inputStream) {
+            if aStream == inputStream {
                 timeoutHandler = nil
                 connected = true
             }
         //  2 = 1 << 1
         case Stream.Event.hasBytesAvailable:
-            if (aStream == inputStream) {
+            if aStream == inputStream {
                 doInput()
             }
         //  4 = 1 << 2
@@ -207,4 +223,3 @@ extension NetSocket: StreamDelegate {
         }
     }
 }
-
