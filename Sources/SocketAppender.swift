@@ -51,12 +51,9 @@ class NetSocket: NSObject {
 
     var inputBuffer: Data = Data()
     var timeout: Int64 = NetSocket.defaultTimeout
-    internal(set) var connected: Bool = false
+    var connected: Bool = false
     var windowSizeC: Int = NetSocket.defaultWindowSizeC
     var securityLevel: StreamSocketSecurityLevel = .none
-    var totalBytesIn: Int64 = 0
-    private(set) var totalBytesOut: Int64 = 0
-    private(set) var queueBytesOut: Int64 = 0
 
     var inputStream: InputStream?
     var outputStream: OutputStream?
@@ -86,7 +83,6 @@ class NetSocket: NSObject {
 
     @discardableResult
     final func doOutput(data: Data, locked: UnsafeMutablePointer<UInt32>? = nil) -> Int {
-        OSAtomicAdd64(Int64(data.count), &queueBytesOut)
         outputQueue.async {
             data.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) -> Void in
                 self.doOutputProcess(buffer, maxLength: data.count)
@@ -115,8 +111,6 @@ class NetSocket: NSObject {
                 break
             }
             total += length
-            totalBytesOut += Int64(length)
-            OSAtomicAdd64(-Int64(length), &queueBytesOut)
         }
     }
 
@@ -142,9 +136,6 @@ class NetSocket: NSObject {
         buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: windowSizeC)
         buffer?.initialize(repeating: 0, count: windowSizeC)
 
-        totalBytesIn = 0
-        totalBytesOut = 0
-        queueBytesOut = 0
         timeoutHandler = didTimeout
         inputBuffer.removeAll(keepingCapacity: false)
 
@@ -201,7 +192,6 @@ class NetSocket: NSObject {
         }
         let length: Int = inputStream.read(buffer, maxLength: windowSizeC)
         if 0 < length {
-            totalBytesIn += Int64(length)
             inputBuffer.append(buffer, count: length)
             listen()
         }
