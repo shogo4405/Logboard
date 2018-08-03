@@ -22,7 +22,6 @@ logger.error("error")
 |-|iOS|OSX|tvOS|watchOS|XCode|Swift|CocoaPods|Carthage|
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 |1.1.0|8.0+|10.9+|9.0+|2.0|9.0+|4.0|1.2.0|0.20.0+|
-|1.0.0|8.0+|10.9+|9.0+|2.0|8.3+|3.1|1.2.0|0.20.0+|
 
 ## Installation
 *Please set up your project Swift 4.0.*
@@ -32,7 +31,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def import_pods
-pod 'Logboard', '~> 1.1.0'
+pod 'Logboard', '~> 1.1.7'
 end
 
 target 'Your Target'  do
@@ -42,7 +41,7 @@ end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 1.1.0
+github "shogo4405/Logboard" ~> 1.1.7
 ```
 
 ## Appenders
@@ -73,5 +72,3 @@ logger.appender = socket
 
 ## License
 BSD-3-Clause
-
-
