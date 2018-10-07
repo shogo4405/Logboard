@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Logboard"
-  s.version      = "1.1.7"
+  s.version      = "1.2.0"
   s.summary      = "Simple Logging framework"
 
   s.description  = <<-DESC

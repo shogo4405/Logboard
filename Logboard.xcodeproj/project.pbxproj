@@ -320,7 +320,7 @@
 					};
 					293875A51F35D6A9009F4B30 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					293875CA1F370E7D009F4B30 = {
@@ -578,7 +578,7 @@
 				PRODUCT_NAME = Logboard;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -599,7 +599,7 @@
 				PRODUCT_NAME = Logboard;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -620,7 +620,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -643,7 +643,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -668,8 +668,7 @@
 				PRODUCT_NAME = Logboard;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -692,8 +691,7 @@
 				PRODUCT_NAME = Logboard;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -715,7 +713,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -739,7 +737,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
