@@ -43,7 +43,7 @@ end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 1.2.1
+github "shogo4405/Logboard" ~> 2.0.0
 ```
 
 ## Appenders
