@@ -72,7 +72,7 @@ public class Logboard {
         return self.level.rawValue <= level.rawValue
     }
 
-    public func trace(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func trace(_ message: Any..., file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .trace) else { return }
         appender.append(self, level: .trace, message: message, file: file, function: function, line: line)
     }
@@ -82,7 +82,7 @@ public class Logboard {
         appender.append(self, level: .trace, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func debug(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func debug(_ message: Any..., file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .debug) else { return }
         appender.append(self, level: .debug, message: message, file: file, function: function, line: line)
     }
@@ -92,7 +92,7 @@ public class Logboard {
         appender.append(self, level: .debug, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func info(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func info(_ message: Any..., file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .info) else { return }
         appender.append(self, level: .info, message: message, file: file, function: function, line: line)
     }
@@ -102,7 +102,7 @@ public class Logboard {
         appender.append(self, level: .info, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func warn(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func warn(_ message: Any..., file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .warn) else { return }
         appender.append(self, level: .warn, message: message, file: file, function: function, line: line)
     }
@@ -112,7 +112,7 @@ public class Logboard {
         appender.append(self, level: .warn, format: format, arguments: arguments, file: file, function: function, line: line)
     }
 
-    public func error(_ message: String, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func error(_ message: Any..., file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .error) else { return }
         appender.append(self, level: .error, message: message, file: file, function: function, line: line)
     }

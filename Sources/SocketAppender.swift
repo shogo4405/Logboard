@@ -14,7 +14,7 @@ public class SocketAppender: LogboardAppender {
         socket.close(isDisconnected: false)
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, message: String, file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         let strings: [String] = [
             Logboard.dateFormatter.string(from: Date()),
             level.description,
@@ -22,7 +22,7 @@ public class SocketAppender: LogboardAppender {
             file.description,
             String(line),
             function.description,
-            message
+            message.map({ String(describing: $0) }).joined(separator: "")
         ]
         if let data: Data = (strings.joined(separator: "\t") + "\r\n\r\n").data(using: .utf8) {
             socket.doOutput(data: data)
