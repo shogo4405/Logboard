@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Logboard"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.summary      = "Simple Logging framework"
 
   s.description  = <<-DESC
@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.watchos.source_files = "Platforms/watchOS/*.{h,swift}"
 
-  s.source_files = "Sources/*.swift"
+  s.source_files = "Sources/**/*.swift"
 
 end
