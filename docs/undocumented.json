@@ -1,0 +1,425 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/ConsoleAppender.swift",
+      "line": 3,
+      "symbol": "ConsoleAppender",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/ConsoleAppender.swift",
+      "line": 4,
+      "symbol": "ConsoleAppender.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/ConsoleAppender.swift",
+      "line": 7,
+      "symbol": "ConsoleAppender.append(_:level:message:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/ConsoleAppender.swift",
+      "line": 10,
+      "symbol": "ConsoleAppender.append(_:level:format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 4,
+      "symbol": "Logboard.Data",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 5,
+      "symbol": "Logboard.Data.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 6,
+      "symbol": "Logboard.Data.level",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 7,
+      "symbol": "Logboard.Data.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 8,
+      "symbol": "Logboard.Data.file",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 9,
+      "symbol": "Logboard.Data.line",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 10,
+      "symbol": "Logboard.Data.function",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 11,
+      "symbol": "Logboard.Data.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 13,
+      "symbol": "Logboard.Data.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.Data.swift",
+      "line": 28,
+      "symbol": "Logboard.Data",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 3,
+      "symbol": "Logboard",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 7,
+      "symbol": "Logboard",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 8,
+      "symbol": "Logboard.dateFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 14,
+      "symbol": "Logboard.Level",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 15,
+      "symbol": "Logboard.Level.trace",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 16,
+      "symbol": "Logboard.Level.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 17,
+      "symbol": "Logboard.Level.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 18,
+      "symbol": "Logboard.Level.warn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 19,
+      "symbol": "Logboard.Level.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 21,
+      "symbol": "Logboard.Level.init(string:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 56,
+      "symbol": "Logboard.with(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 63,
+      "symbol": "Logboard.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 64,
+      "symbol": "Logboard.level",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 65,
+      "symbol": "Logboard.appender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 67,
+      "symbol": "Logboard.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 71,
+      "symbol": "Logboard.isEnabledFor(level:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 75,
+      "symbol": "Logboard.trace(_:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 80,
+      "symbol": "Logboard.trace(format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 85,
+      "symbol": "Logboard.debug(_:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 90,
+      "symbol": "Logboard.debug(format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 95,
+      "symbol": "Logboard.info(_:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 100,
+      "symbol": "Logboard.info(format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 105,
+      "symbol": "Logboard.warn(_:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 110,
+      "symbol": "Logboard.warn(format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 115,
+      "symbol": "Logboard.error(_:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/Logboard.swift",
+      "line": 120,
+      "symbol": "Logboard.error(format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/LogboardAppender.swift",
+      "line": 3,
+      "symbol": "LogboardAppender",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/LogboardAppender.swift",
+      "line": 4,
+      "symbol": "LogboardAppender.append(_:level:message:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/LogboardAppender.swift",
+      "line": 5,
+      "symbol": "LogboardAppender.append(_:level:format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/MultiAppender.swift",
+      "line": 3,
+      "symbol": "MultiAppender",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/MultiAppender.swift",
+      "line": 4,
+      "symbol": "MultiAppender.appenders",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/MultiAppender.swift",
+      "line": 6,
+      "symbol": "MultiAppender.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/MultiAppender.swift",
+      "line": 9,
+      "symbol": "MultiAppender.append(_:level:message:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/MultiAppender.swift",
+      "line": 15,
+      "symbol": "MultiAppender.append(_:level:format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/NullAppender.swift",
+      "line": 3,
+      "symbol": "NullAppender",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/NullAppender.swift",
+      "line": 4,
+      "symbol": "NullAppender.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/NullAppender.swift",
+      "line": 7,
+      "symbol": "NullAppender.append(_:level:message:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/NullAppender.swift",
+      "line": 9,
+      "symbol": "NullAppender.append(_:level:format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 3,
+      "symbol": "SocketAppender",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 6,
+      "symbol": "SocketAppender.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 9,
+      "symbol": "SocketAppender.connect(_:port:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 13,
+      "symbol": "SocketAppender.close()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 17,
+      "symbol": "SocketAppender.append(_:level:message:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 32,
+      "symbol": "SocketAppender.append(_:level:format:arguments:file:function:line:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 201,
+      "symbol": "NetSocket",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/Logboard/Sources/Logboard/SocketAppender.swift",
+      "line": 203,
+      "symbol": "NetSocket.stream(_:handle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/shogo/Dropbox/xcode/Logboard"
+}
