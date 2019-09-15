@@ -69,3 +69,6 @@ fastlane/test_output
 Logboard.xcodeproj/project.xcworkspace/xcuserdata/shogo.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcuserstate
+*.tgz
+docs/docsets/Logboard.docset/Contents/Resources/Documents/undocumented.json
+docs/docsets/Logboard.tgz
