@@ -33,7 +33,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def import_pods
-pod 'Logboard', '~> 2.1.2'
+pod 'Logboard', '~> 2.1.3'
 end
 
 target 'Your Target'  do
@@ -43,7 +43,7 @@ end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 2.1.2
+github "shogo4405/Logboard" ~> 2.1.3
 ```
 
 ## Appenders
