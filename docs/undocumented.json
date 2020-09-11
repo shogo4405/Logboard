@@ -359,7 +359,7 @@
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/Logboard/Sources/Logboard/NullAppender.swift",
-      "line": 9,
+      "line": 10,
       "symbol": "NullAppender.append(_:level:format:arguments:file:function:line:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
