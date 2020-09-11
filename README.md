@@ -1,6 +1,6 @@
 # Logboard
 [![Platform](https://img.shields.io/cocoapods/p/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
-![Language](https://img.shields.io/badge/language-Swift%204.0-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%205.3-orange.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/shogo4405/Logboard/blob/master/LICENSE.md)
 
@@ -21,7 +21,7 @@ logger.error("error")
 ## Requirements
 |-|iOS|OSX|tvOS|watchOS|XCode|Swift|CocoaPods|Carthage|
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|2.2.0+|9.0+|10.9+|9.0+|2.0|12.0+|5.0|1.3.0|0.31.0+|
+|2.2.0+|9.0+|10.9+|9.0+|2.0|12.0+|5.3|1.3.0|0.31.0+|
 |2.1.0+|8.0+|10.9+|9.0+|2.0|11.0+|5.0|1.3.0|0.31.0+|
 
 ## Installation
