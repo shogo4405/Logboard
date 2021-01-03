@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Logboard",
     products: [
-        .library(name: "Logboard", type: .dynamic, targets: ["Logboard"])
+        .library(name: "Logboard", targets: ["Logboard"])
     ],
     dependencies: [
     ],
