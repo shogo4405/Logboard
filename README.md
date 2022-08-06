@@ -72,5 +72,25 @@ socket.connect("toHost", 22222)
 logger.appender = socket
 ```
 
+## Network Console
+iOS, macOS, tvOS, watchOS Debugging Tool, Logging console via Network.
+
+### Download
+```
+git clone https://github.com/shogo4405/Logboard.git
+cd Logboard/Console
+carthage update --platform macOS --use-xcframewokrs
+```
+### Build
+Open xcode 'Console' and [Product] -> [Archive].
+
+### SocketAppender
+```
+let logger = Logboard.with("identifier")
+let socket = SocketAppender()
+socket.connect("toHost", 22222)
+logger.appender = socket
+```
+
 ## License
 BSD-3-Clause
