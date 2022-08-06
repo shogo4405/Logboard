@@ -1,9 +1,7 @@
 import Foundation
 
+/// The ConsoleAppender class can output your xcode console with print function.
 public class ConsoleAppender: LogboardAppender {
-    public init() {
-    }
-
     public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         print(Logboard.dateFormatter.string(from: Date()), "[\(level)]", "[\(logboard.identifier)]", "[\(filename(file.description)):\(line)]", function, ">", message.map({ String(describing: $0) }).joined(separator: ""))
     }

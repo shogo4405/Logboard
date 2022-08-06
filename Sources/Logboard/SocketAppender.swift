@@ -1,15 +1,15 @@
 import Foundation
 
+/// The SocketAppender class writes a message to LogboardConsole service.
 public class SocketAppender: LogboardAppender {
     private var socket: NetSocket = NetSocket()
 
-    public init() {
-    }
-
+    /// Connects the Logboard Console service.
     public func connect(_ name: String, port: Int) {
         socket.connect(withName: name, port: port)
     }
 
+    /// Closes a conneciton.
     public func close() {
         socket.close(isDisconnected: false)
     }
@@ -194,7 +194,7 @@ class NetSocket: NSObject {
 
 extension NetSocket: StreamDelegate {
     // MARK: StreamDelegate
-    public func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
+    func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
         switch eventCode {
         //  1 = 1 << 0
         case .openCompleted:

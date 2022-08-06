@@ -1,15 +1,24 @@
 import Foundation
 
 extension Logboard {
+    /// The logging message model.
     public struct Data {
-        public var date: Date
-        public var level: Level
-        public var identifier: String
-        public var file: String
-        public var line: Int
-        public var function: String
-        public var message: String
+        /// The date.
+        public let date: Date
+        /// The logging level.
+        public let level: Level
+        /// The identifier.
+        public let identifier: String
+        /// The filename.
+        public let file: String
+        /// The line number.
+        public let line: Int
+        /// The function name.
+        public let function: String
+        /// The message.
+        public let message: String
 
+        /// Create a Logboard.Data with data.
         public init?(_ data: Foundation.Data) {
             guard let strings: [String.SubSequence] = String(bytes: data, encoding: .utf8)?.split(separator: "\t"), 7 <= strings.count else {
                 return nil
@@ -26,6 +35,7 @@ extension Logboard {
 }
 
 extension Logboard.Data: CustomStringConvertible {
+    /// MARK: CustomStringConvertible
     public var description: String {
         return "\(Logboard.dateFormatter.string(from: date)) [\(level)] [\(identifier)] [\(filename(file)):\(line)] \(function) > \(message)"
     }
