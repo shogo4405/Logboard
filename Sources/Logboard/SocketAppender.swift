@@ -82,26 +82,20 @@ class NetSocket: NSObject {
     }
 
     @discardableResult
-    final func doOutput(data: Data, locked: UnsafeMutablePointer<UInt32>? = nil) -> Int {
+    final func doOutput(data: Data) -> Int {
         outputQueue.async {
-            data.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) -> Void in
-                self.doOutputProcess(buffer, maxLength: data.count)
-            }
-            if locked != nil {
-                OSAtomicAnd32Barrier(0, locked!)
+            data.withUnsafeBytes { bytes in
+                guard let bytes = bytes.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
+                    return
+                }
+                self.doOutputProcess(bytes, maxLength: data.count)
             }
         }
         return data.count
     }
 
-    final func doOutputProcess(_ data: Data) {
-        data.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) -> Void in
-            doOutputProcess(buffer, maxLength: data.count)
-        }
-    }
-
     final func doOutputProcess(_ buffer: UnsafePointer<UInt8>, maxLength: Int) {
-        guard let outputStream: OutputStream = outputStream else {
+        guard let outputStream = outputStream else {
             return
         }
         var total: Int = 0
@@ -205,8 +199,8 @@ extension NetSocket: StreamDelegate {
         //  1 = 1 << 0
         case .openCompleted:
             guard let inputStream = inputStream, let outputStream = outputStream,
-                inputStream.streamStatus == .open && outputStream.streamStatus == .open else {
-                    break
+                  inputStream.streamStatus == .open && outputStream.streamStatus == .open else {
+                break
             }
             if aStream == inputStream {
                 timeoutHandler = nil
