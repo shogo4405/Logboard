@@ -74,6 +74,7 @@ logger.appender = socket
 
 ## Network Console
 iOS, macOS, tvOS, watchOS Debugging Tool, Logging console via Network.
+![screenshot](https://user-images.githubusercontent.com/810189/183241560-5ceb2d7e-9421-4eb7-babb-370ce1429645.gif)
 
 ### Download
 ```
