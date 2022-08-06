@@ -1,10 +1,16 @@
 import Foundation
 
+/// The MultiAppender class delegate appenders.
+/// ## Example code:
+/// ```
+/// let multi = MultiAppender()
+/// multi.appenders.append(ConsoleAppender())
+/// multi.appenders.append(SocketAppender())
+/// logger.appender = multi
+/// ```
 public class MultiAppender: LogboardAppender {
+    /// The appenders.
     public var appenders: [LogboardAppender] = []
-
-    public init() {
-    }
 
     public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         for appender in appenders {
