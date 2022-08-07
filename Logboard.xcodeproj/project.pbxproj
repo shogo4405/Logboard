@@ -39,6 +39,10 @@
 		29617B13232E6DEA00AD06AE /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF5232E6D7D00AD06AE /* SocketAppender.swift */; };
 		29617B14232E6DEB00AD06AE /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF5232E6D7D00AD06AE /* SocketAppender.swift */; };
 		29617B15232E6DEC00AD06AE /* SocketAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF5232E6D7D00AD06AE /* SocketAppender.swift */; };
+		BCA00718289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */; };
+		BCA00719289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */; };
+		BCA0071A289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */; };
+		BCA0071B289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,7 @@
 		29617AF7232E6D7D00AD06AE /* MultiAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiAppender.swift; path = Sources/Logboard/MultiAppender.swift; sourceTree = "<group>"; };
 		29617AF8232E6D7D00AD06AE /* Logboard.Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logboard.Data.swift; path = Sources/Logboard/Logboard.Data.swift; sourceTree = "<group>"; };
 		29617B16232E6E7900AD06AE /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLoggerAppender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +199,7 @@
 				29617AF7232E6D7D00AD06AE /* MultiAppender.swift */,
 				29617AF3232E6D7D00AD06AE /* NullAppender.swift */,
 				29617AF5232E6D7D00AD06AE /* SocketAppender.swift */,
+				BCA00717289EAFF200AAA74D /* OSLoggerAppender.swift */,
 			);
 			name = Logboard;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 			files = (
 				29617AFF232E6D7D00AD06AE /* Logboard.Data.swift in Sources */,
 				29617AF9232E6D7D00AD06AE /* LogboardAppender.swift in Sources */,
+				BCA00718289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */,
 				29617AFA232E6D7D00AD06AE /* NullAppender.swift in Sources */,
 				29617AFE232E6D7D00AD06AE /* MultiAppender.swift in Sources */,
 				29617AFB232E6D7D00AD06AE /* Logboard.swift in Sources */,
@@ -413,6 +420,7 @@
 			files = (
 				29617B04232E6DD300AD06AE /* Logboard.Data.swift in Sources */,
 				29617B01232E6DB600AD06AE /* ConsoleAppender.swift in Sources */,
+				BCA00719289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */,
 				29617B0D232E6DE100AD06AE /* MultiAppender.swift in Sources */,
 				29617B0A232E6DDC00AD06AE /* LogboardAppender.swift in Sources */,
 				29617B13232E6DEA00AD06AE /* SocketAppender.swift in Sources */,
@@ -427,6 +435,7 @@
 			files = (
 				29617B05232E6DD400AD06AE /* Logboard.Data.swift in Sources */,
 				29617B02232E6DB700AD06AE /* ConsoleAppender.swift in Sources */,
+				BCA0071A289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */,
 				29617B0E232E6DE100AD06AE /* MultiAppender.swift in Sources */,
 				29617B0B232E6DDD00AD06AE /* LogboardAppender.swift in Sources */,
 				29617B14232E6DEB00AD06AE /* SocketAppender.swift in Sources */,
@@ -441,6 +450,7 @@
 			files = (
 				29617B06232E6DD500AD06AE /* Logboard.Data.swift in Sources */,
 				29617B03232E6DB700AD06AE /* ConsoleAppender.swift in Sources */,
+				BCA0071B289EAFF200AAA74D /* OSLoggerAppender.swift in Sources */,
 				29617B0F232E6DE200AD06AE /* MultiAppender.swift in Sources */,
 				29617B0C232E6DDD00AD06AE /* LogboardAppender.swift in Sources */,
 				29617B15232E6DEC00AD06AE /* SocketAppender.swift in Sources */,

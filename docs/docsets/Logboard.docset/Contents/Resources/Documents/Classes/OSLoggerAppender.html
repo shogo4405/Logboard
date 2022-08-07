@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MultiAppender Class Reference</title>
+    <title>OSLoggerAppender Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/MultiAppender" class="dashAnchor"></a>
-    <a title="MultiAppender Class Reference"></a>
+    <a name="//apple_ref/swift/Class/OSLoggerAppender" class="dashAnchor"></a>
+    <a title="OSLoggerAppender Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Logboard 2.2.2 Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Logboard Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        MultiAppender Class Reference
+        OSLoggerAppender Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -77,21 +77,21 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MultiAppender</h1>
+            <h1>OSLoggerAppender</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiAppender</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/LogboardAppender.html">LogboardAppender</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">7.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">OSLoggerAppender</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/LogboardAppender.html">LogboardAppender</a></span></code></pre>
 
                 </div>
               </div>
-            <p>The MultiAppender class delegates appenders.</p>
-<h2 id='example-code' class='heading'>Example code:</h2>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">multi</span> <span class="o">=</span> <span class="kt">MultiAppender</span><span class="p">()</span>
-<span class="n">multi</span><span class="o">.</span><span class="n">appenders</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">ConsoleAppender</span><span class="p">())</span>
-<span class="n">multi</span><span class="o">.</span><span class="n">appenders</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">SocketAppender</span><span class="p">())</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">appender</span> <span class="o">=</span> <span class="n">multi</span>
-</code></pre>
+            <p>The OSLoggerAppender class can output your Console.app with os_log function.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <a href="https://developer.apple.com/documentation/os/logging/generating_log_messages_from_your_code">https://developer.apple.com/documentation/os/logging/generating_log_messages_from_your_code</a>
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -100,9 +100,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8Logboard13MultiAppenderC9appendersSayAA0aC0_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/appenders" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8Logboard13MultiAppenderC9appendersSayAA0aC0_pGvp">appenders</a>
+                    <a name="/s:8Logboard16OSLoggerAppenderC9sybsystem8categoryACSS_SStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(sybsystem:category:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Logboard16OSLoggerAppenderC9sybsystem8categoryACSS_SStcfc">init(sybsystem:<wbr>category:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -110,14 +110,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The appenders.</p>
+                        <p>Creates a logger using the specified subsystem and category.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">appenders</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/LogboardAppender.html">LogboardAppender</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">sybsystem</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

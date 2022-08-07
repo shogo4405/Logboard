@@ -35,7 +35,7 @@ extension Logboard {
 }
 
 extension Logboard.Data: CustomStringConvertible {
-    /// MARK: CustomStringConvertible
+    // MARK: CustomStringConvertible
     public var description: String {
         return "\(Logboard.dateFormatter.string(from: date)) [\(level)] [\(identifier)] [\(filename(file)):\(line)] \(function) > \(message)"
     }

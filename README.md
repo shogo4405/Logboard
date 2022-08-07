@@ -4,7 +4,8 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/shogo4405/Logboard/blob/master/LICENSE.md)
 
-Simple logging framework for your framework project.
+* Simple logging framework for your framework project.
+* [API Documentation](https://shogo4405.github.io/Logboard/)
 
 ## Usage
 ```swift

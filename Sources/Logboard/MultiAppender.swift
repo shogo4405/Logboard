@@ -1,6 +1,6 @@
 import Foundation
 
-/// The MultiAppender class delegate appenders.
+/// The MultiAppender class delegates appenders.
 /// ## Example code:
 /// ```
 /// let multi = MultiAppender()
