@@ -68,5 +68,4 @@ fastlane/test_output
 
 *.xcuserstate
 *.tgz
-docs/docsets/Logboard.docset/Contents/Resources/Documents/undocumented.json
-docs/docsets/Logboard.tgz
+.DS_Store

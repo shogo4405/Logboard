@@ -26,15 +26,15 @@ public class OSLoggerAppender: LogboardAppender {
             message.map({ String(describing: $0) }).joined(separator: "")
         switch level {
         case .trace:
-            logger.trace("\(message)")
+            logger.trace("\(message, privacy: .public)")
         case .debug:
-            logger.debug("\(message)")
+            logger.debug("\(message, privacy: .public)")
         case .info:
-            logger.info("\(message)")
+            logger.info("\(message, privacy: .public)")
         case .warn:
-            logger.warning("\(message)")
+            logger.warning("\(message, privacy: .public)")
         case .error:
-            logger.error("\(message)")
+            logger.error("\(message, privacy: .public)")
         }
     }
 
@@ -46,15 +46,15 @@ public class OSLoggerAppender: LogboardAppender {
             String(format: format, arguments)
         switch level {
         case .trace:
-            logger.trace("\(message)")
+            logger.trace("\(message, privacy: .public)")
         case .debug:
-            logger.debug("\(message)")
+            logger.debug("\(message, privacy: .public)")
         case .info:
-            logger.info("\(message)")
+            logger.info("\(message, privacy: .public)")
         case .warn:
-            logger.warning("\(message)")
+            logger.warning("\(message, privacy: .public)")
         case .error:
-            logger.error("\(message)")
+            logger.error("\(message, privacy: .public)")
         }
     }
 }
