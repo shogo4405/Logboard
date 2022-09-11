@@ -20,36 +20,34 @@ logger.error("error")
 ```
 
 ## Requirements
-|-|iOS|OSX|tvOS|watchOS|XCode|Swift|CocoaPods|Carthage|
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|2.2.0+|9.0+|10.9+|9.0+|2.0|12.0+|5.3|1.3.0|0.31.0+|
-|2.1.0+|8.0+|10.9+|9.0+|2.0|11.0+|5.0|1.3.0|0.31.0+|
+|-|iOS|OSX|tvOS|watchOS|Xcode|Swift|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|2.3.0+|11.0+|10.9+|11.0+|4.0|14.0+|5.3|
+|2.2.0+|9.0+|10.9+|9.0+|2.0|13.0+|5.3|
 
 ## Installation
-*Please set up your project Swift 5.0
-
 ### CocoaPods
 ```rb
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def import_pods
-pod 'Logboard', '~> 2.2.2'
+pod 'Logboard', '~> 2.3.0'
 end
 
 target 'Your Target'  do
-platform :ios, '9.0'
+platform :ios, '11.0'
 import_pods
 end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 2.2.2
+github "shogo4405/Logboard" ~> 2.3.0
 ```
 
 ## Appenders
 ### ConsoleAppender
-Use print function. You can see XCode's console.
+Use print function. You can see Xcode's console.
 ```swift
 let logger = Logboard.with("identifier")
 let console = ConsoleAppender()

@@ -4,8 +4,8 @@ func filename(_ file: String) -> String {
     return file.components(separatedBy: "/").last ?? file
 }
 
-/// The Logboard class is writing string messages to the LogboardAppender.
-public class Logboard {
+/// The LBLogger class is writing string messages to the LogboardAppender.
+public class LBLogger {
     /// The  default dateFormatter values that is yyyy-dd-MM HH:mm:ss.SSS.
     static public var dateFormatter: DateFormatter = {
         let dateFormatter: DateFormatter = DateFormatter()
@@ -61,12 +61,12 @@ public class Logboard {
         }
     }
 
-    private static var instances: [String: Logboard] = [:]
+    private static var instances: [String: LBLogger] = [:]
 
     /// Create or get a Logboard instance.
-    public static func with(_ identifier: String) -> Logboard {
+    public static func with(_ identifier: String) -> LBLogger {
         if instances[identifier] == nil {
-            instances[identifier] = Logboard(identifier)
+            instances[identifier] = LBLogger(identifier)
         }
         return instances[identifier]!
     }
@@ -74,9 +74,9 @@ public class Logboard {
     /// The identifier is the subsystem name.
     public let identifier: String
     /// Specifies the logging level.
-    public var level: Logboard.Level = .info
+    public var level: LBLogger.Level = .info
     /// Specifies logging appenders.
-    public var appender: LogboardAppender = ConsoleAppender()
+    public var appender: LBLoggerAppender = ConsoleAppender()
 
     /// Create a logger with the identifier.
     public init(_ identifier: String) {
@@ -84,7 +84,7 @@ public class Logboard {
     }
 
     /// Is logging enabled for the supplied level or not.
-    public func isEnabledFor(level: Logboard.Level) -> Bool {
+    public func isEnabledFor(level: LBLogger.Level) -> Bool {
         return self.level.rawValue <= level.rawValue
     }
 
