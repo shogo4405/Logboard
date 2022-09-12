@@ -1,6 +1,6 @@
 import Foundation
 
-extension Logboard {
+extension LBLogger {
     /// The logging message model.
     public struct Data {
         /// The date.
@@ -23,7 +23,7 @@ extension Logboard {
             guard let strings: [String.SubSequence] = String(bytes: data, encoding: .utf8)?.split(separator: "\t"), 7 <= strings.count else {
                 return nil
             }
-            date = Logboard.dateFormatter.date(from: String(strings[0])) ?? Date()
+            date = LBLogger.dateFormatter.date(from: String(strings[0])) ?? Date()
             level = Level(string: String(strings[1])) ?? .trace
             identifier = String(strings[2])
             file = String(strings[3])
@@ -34,9 +34,9 @@ extension Logboard {
     }
 }
 
-extension Logboard.Data: CustomStringConvertible {
+extension LBLogger.Data: CustomStringConvertible {
     // MARK: CustomStringConvertible
     public var description: String {
-        return "\(Logboard.dateFormatter.string(from: date)) [\(level)] [\(identifier)] [\(filename(file)):\(line)] \(function) > \(message)"
+        return "\(LBLogger.dateFormatter.string(from: date)) [\(level)] [\(identifier)] [\(filename(file)):\(line)] \(function) > \(message)"
     }
 }

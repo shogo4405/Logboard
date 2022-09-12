@@ -8,17 +8,17 @@ import Foundation
 /// multi.appenders.append(SocketAppender())
 /// logger.appender = multi
 /// ```
-public class MultiAppender: LogboardAppender {
+public class MultiAppender: LBLoggerAppender {
     /// The appenders.
-    public var appenders: [LogboardAppender] = []
+    public var appenders: [LBLoggerAppender] = []
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         for appender in appenders {
             appender.append(logboard, level: level, message: message, file: file, function: function, line: line)
         }
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
         for appender in appenders {
             appender.append(logboard, level: level, format: format, arguments: arguments, file: file, function: function, line: line)
         }

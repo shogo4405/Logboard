@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Logboard"
-  s.version      = "2.2.4"
+  s.version      = "2.3.0"
   s.summary      = "Simple Logging framework"
   s.swift_version = "5.0"
 
@@ -16,16 +16,16 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/shogo4405/Logboard.git", :tag => "#{s.version}" }
   s.social_media_url = "http://twitter.com/shogo4405"
 
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "11.0"
   s.ios.source_files = "Platforms/iOS/*.{h,swift}"
 
   s.osx.deployment_target = "10.9"
   s.osx.source_files = "Platforms/macOS/*.{h,swift}"
 
-  s.tvos.deployment_target = "9.0"
+  s.tvos.deployment_target = "11.0"
   s.tvos.source_files = "Platforms/tvOS/*.{h,swift}"
 
-  s.watchos.deployment_target = "2.0"
+  s.watchos.deployment_target = "4.0"
   s.watchos.source_files = "Platforms/watchOS/*.{h,swift}"
 
   s.source_files = "Sources/**/*.swift"

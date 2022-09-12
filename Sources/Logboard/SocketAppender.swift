@@ -1,7 +1,7 @@
 import Foundation
 
 /// The SocketAppender class writes a message to LogboardConsole service.
-public class SocketAppender: LogboardAppender {
+public class SocketAppender: LBLoggerAppender {
     private var socket: NetSocket = NetSocket()
 
     /// Connects the Logboard Console service.
@@ -14,9 +14,9 @@ public class SocketAppender: LogboardAppender {
         socket.close(isDisconnected: false)
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         let strings: [String] = [
-            Logboard.dateFormatter.string(from: Date()),
+            LBLogger.dateFormatter.string(from: Date()),
             level.description,
             logboard.identifier,
             file.description,
@@ -29,9 +29,9 @@ public class SocketAppender: LogboardAppender {
         }
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
         let strings: [String] = [
-            Logboard.dateFormatter.string(from: Date()),
+            LBLogger.dateFormatter.string(from: Date()),
             level.description,
             logboard.identifier,
             file.description,

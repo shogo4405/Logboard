@@ -10,7 +10,7 @@ import OSLog
 @available(macOS 11.0, *)
 @available(tvOS 14.0, *)
 @available(watchOS 7.0, *)
-public class OSLoggerAppender: LogboardAppender {
+public class OSLoggerAppender: LBLoggerAppender {
     private let logger: Logger
 
     /// Creates a logger using the specified subsystem and category.
@@ -18,7 +18,7 @@ public class OSLoggerAppender: LogboardAppender {
         logger = Logger(subsystem: sybsystem, category: category)
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         let message =
             "[\(filename(file.description)):\(line)]" +
             function.description +
@@ -38,7 +38,7 @@ public class OSLoggerAppender: LogboardAppender {
         }
     }
 
-    public func append(_ logboard: Logboard, level: Logboard.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
         let message =
             "[\(filename(file.description)):\(line)]" +
             function.description +
