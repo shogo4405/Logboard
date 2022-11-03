@@ -92,7 +92,7 @@ GEM
     ruby-macho (2.5.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sqlite3 (1.5.0)
+    sqlite3 (1.5.2)
       mini_portile2 (~> 2.8.0)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
