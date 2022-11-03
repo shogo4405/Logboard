@@ -89,7 +89,7 @@
 <li><a href="https://shogo4405.github.io/Logboard/">API Documentation</a></li>
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">Logboard</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">LBLogger</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
 
 <span class="n">logger</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="o">.</span><span class="n">trace</span>
 <span class="n">logger</span><span class="o">.</span><span class="nf">trace</span><span class="p">(</span><span class="s">"trace"</span><span class="p">)</span>
@@ -151,19 +151,19 @@
 <h3 id='consoleappender' class='heading'>ConsoleAppender</h3>
 
 <p>Use print function. You can see Xcode&rsquo;s console.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">Logboard</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">LBLogger</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">console</span> <span class="o">=</span> <span class="kt">ConsoleAppender</span><span class="p">()</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">appender</span> <span class="o">=</span> <span class="n">console</span>
 </code></pre>
 <h3 id='multiappender' class='heading'>MultiAppender</h3>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">Logboard</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">LBLogger</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">multi</span> <span class="o">=</span> <span class="kt">MultiAppender</span><span class="p">()</span>
 <span class="n">multi</span><span class="o">.</span><span class="n">appenders</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">ConsoleAppender</span><span class="p">())</span>
 <span class="n">multi</span><span class="o">.</span><span class="n">appenders</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">SocketAppender</span><span class="p">())</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">appender</span> <span class="o">=</span> <span class="n">multi</span>
 </code></pre>
 <h3 id='socketappender' class='heading'>SocketAppender</h3>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">Logboard</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">logger</span> <span class="o">=</span> <span class="kt">LBLogger</span><span class="o">.</span><span class="nf">with</span><span class="p">(</span><span class="s">"identifier"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">socket</span> <span class="o">=</span> <span class="kt">SocketAppender</span><span class="p">()</span>
 <span class="n">socket</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="s">"toHost"</span><span class="p">,</span> <span class="mi">22222</span><span class="p">)</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">appender</span> <span class="o">=</span> <span class="n">socket</span>
@@ -181,7 +181,7 @@ carthage update --platform macOS --use-xcframewokrs
 
 <p>Open xcode &lsquo;Console&rsquo; and [Product] -&gt; [Archive].</p>
 <h3 id='socketappender' class='heading'>SocketAppender</h3>
-<pre class="highlight plaintext"><code>let logger = Logboard.with("identifier")
+<pre class="highlight plaintext"><code>let logger = LBLogger.with("identifier")
 let socket = SocketAppender()
 socket.connect("toHost", 22222)
 logger.appender = socket
@@ -193,8 +193,8 @@ logger.appender = socket
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/shogo4405/Logboard" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2022-09-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/shogo4405/Logboard" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2022-11-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>

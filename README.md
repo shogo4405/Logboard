@@ -9,7 +9,7 @@
 
 ## Usage
 ```swift
-let logger = Logboard.with("identifier")
+let logger = LBLogger.with("identifier")
 
 logger.level = .trace
 logger.trace("trace")
@@ -49,14 +49,14 @@ github "shogo4405/Logboard" ~> 2.3.0
 ### ConsoleAppender
 Use print function. You can see Xcode's console.
 ```swift
-let logger = Logboard.with("identifier")
+let logger = LBLogger.with("identifier")
 let console = ConsoleAppender()
 logger.appender = console
 ```
 
 ### MultiAppender
 ```swift
-let logger = Logboard.with("identifier")
+let logger = LBLogger.with("identifier")
 let multi = MultiAppender()
 multi.appenders.append(ConsoleAppender())
 multi.appenders.append(SocketAppender())
@@ -65,7 +65,7 @@ logger.appender = multi
 
 ### SocketAppender
 ```swift
-let logger = Logboard.with("identifier")
+let logger = LBLogger.with("identifier")
 let socket = SocketAppender()
 socket.connect("toHost", 22222)
 logger.appender = socket
@@ -86,7 +86,7 @@ Open xcode 'Console' and [Product] -> [Archive].
 
 ### SocketAppender
 ```
-let logger = Logboard.with("identifier")
+let logger = LBLogger.with("identifier")
 let socket = SocketAppender()
 socket.connect("toHost", 22222)
 logger.appender = socket
