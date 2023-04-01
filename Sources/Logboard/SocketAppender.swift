@@ -4,6 +4,10 @@ import Foundation
 public class SocketAppender: LBLoggerAppender {
     private var socket: NetSocket = NetSocket()
 
+    /// Creates a SocketAppende instance.
+    public init() {
+    }
+
     /// Connects the Logboard Console service.
     public func connect(_ name: String, port: Int) {
         socket.connect(withName: name, port: port)

@@ -12,6 +12,10 @@ public class MultiAppender: LBLoggerAppender {
     /// The appenders.
     public var appenders: [LBLoggerAppender] = []
 
+    /// Creates a MultIAppender instance.
+    public init() {
+    }
+
     public func append(_ logboard: LBLogger, level: LBLogger.Level, message: [Any], file: StaticString, function: StaticString, line: Int) {
         for appender in appenders {
             appender.append(logboard, level: level, message: message, file: file, function: function, line: line)

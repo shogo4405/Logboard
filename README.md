@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/shogo4405/Logboard/blob/master/LICENSE.md)
 
 * Simple logging framework for your framework project.
-* [API Documentation](https://shogo4405.github.io/Logboard/)
+* [API Documentation](https://shogo4405.github.io/Logboard/documentation/logboard/)
 
 ## Usage
 ```swift
@@ -32,7 +32,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def import_pods
-pod 'Logboard', '~> 2.3.0'
+pod 'Logboard', '~> 2.3.1'
 end
 
 target 'Your Target'  do
@@ -42,7 +42,7 @@ end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 2.3.0
+github "shogo4405/Logboard" ~> 2.3.1
 ```
 
 ## Appenders
