@@ -603,7 +603,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SKIP_INSTALL = YES;
@@ -631,7 +631,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SKIP_INSTALL = YES;
@@ -656,7 +656,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = watchos;
@@ -684,7 +684,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = watchos;
@@ -715,7 +715,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = macosx;
@@ -744,7 +744,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = macosx;
@@ -771,7 +771,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = appletvos;
@@ -800,7 +800,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.0;
+				MARKETING_VERSION = 2.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = appletvos;
