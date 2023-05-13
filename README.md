@@ -20,10 +20,10 @@ logger.error("error")
 ```
 
 ## Requirements
-|-|iOS|OSX|tvOS|watchOS|Xcode|Swift|
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|2.3.0+|11.0+|10.9+|11.0+|4.0|14.0+|5.3|
-|2.2.0+|9.0+|10.9+|9.0+|2.0|13.0+|5.3|
+|-|iOS|macOS|tvOS|watchOS|visionOS|Xcode|Swift|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|2.4.0+|12.0+|10.13+|12.0+|4.0|1.0+|15.0+|5.3|
+|2.3.0+|11.0+|10.13+|11.0+|4.0|-|14.0+|5.3|
 
 ## Installation
 ### CocoaPods
@@ -32,17 +32,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def import_pods
-pod 'Logboard', '~> 2.3.1'
+pod 'Logboard', '~> 2.4.0'
 end
 
 target 'Your Target'  do
-platform :ios, '11.0'
+platform :ios, '12.0'
 import_pods
 end
 ```
 ### Carthage
 ```
-github "shogo4405/Logboard" ~> 2.3.1
+github "shogo4405/Logboard" ~> 2.4.0
 ```
 
 ## Appenders
