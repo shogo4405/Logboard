@@ -10,7 +10,7 @@ import Foundation
 /// ```
 public class MultiAppender: LBLoggerAppender {
     /// The appenders.
-    public var appenders: [LBLoggerAppender] = []
+    public var appenders: [any LBLoggerAppender] = []
 
     /// Creates a MultIAppender instance.
     public init() {

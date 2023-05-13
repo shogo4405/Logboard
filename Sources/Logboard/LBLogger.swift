@@ -76,7 +76,7 @@ public class LBLogger {
     /// Specifies the logging level.
     public var level: LBLogger.Level = .info
     /// Specifies logging appenders.
-    public var appender: LBLoggerAppender = ConsoleAppender()
+    public var appender: any LBLoggerAppender = ConsoleAppender()
 
     /// Create a logger with the identifier.
     public init(_ identifier: String) {
