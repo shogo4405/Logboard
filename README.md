@@ -1,8 +1,8 @@
 # Logboard
-[![Platform](https://img.shields.io/cocoapods/p/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
-![Language](https://img.shields.io/badge/language-Swift%205.3-orange.svg)
-[![CocoaPods](https://img.shields.io/cocoapods/v/Logboard.svg?style=flat)](http://cocoapods.org/pods/Logboard)
-[![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/shogo4405/Logboard/blob/master/LICENSE.md)
+[![Release](https://img.shields.io/github/v/release/shogo4405/Logboard)](https://github.com/shogo4405/Logboard/releases/latest)
+[![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fshogo4405%2FLogboard%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/shogo4405/HaishinKit.swift)
+[![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fshogo4405%2FLogboard%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/shogo4405/Logboard)
+[![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/shogo4405/Logboard/master/LICENSE.md)
 
 * Simple logging framework for your framework project.
 * [API Documentation](https://shogo4405.github.io/Logboard/documentation/logboard/)
