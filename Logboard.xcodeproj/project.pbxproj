@@ -346,9 +346,10 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.3.1;
+				MARKETING_VERSION = 2.4.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
+				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature ExistentialAny";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = "";
@@ -384,9 +385,10 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.3.1;
+				MARKETING_VERSION = 2.4.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
+				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature ExistentialAny";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.Logboard;
 				PRODUCT_NAME = Logboard;
 				SDKROOT = "";
