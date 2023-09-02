@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.author       = { "shogo4405" => "shogo4405@gmail.com" }
   s.authors      = { "shogo4405" => "shogo4405@gmail.com" }
   s.source       = { :git => "https://github.com/shogo4405/Logboard.git", :tag => "#{s.version}" }
-  s.social_media_url = "http://twitter.com/shogo4405"
 
   s.ios.deployment_target = "12.0"
   s.osx.deployment_target = "10.13"
