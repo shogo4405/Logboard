@@ -38,7 +38,7 @@ public class OSLoggerAppender: LBLoggerAppender {
         }
     }
 
-    public func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int) {
+    public func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: any CVarArg, file: StaticString, function: StaticString, line: Int) {
         let message =
             "[\(filename(file.description)):\(line)]" +
             function.description +

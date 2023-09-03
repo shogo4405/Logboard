@@ -95,7 +95,7 @@ public class LBLogger {
     }
 
     /// Writes a trace message to the appender with a format string.
-    public func trace(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func trace(format: String, arguments: any CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .trace) else { return }
         appender.append(self, level: .trace, format: format, arguments: arguments, file: file, function: function, line: line)
     }
@@ -107,7 +107,7 @@ public class LBLogger {
     }
 
     /// Writes a debug message to the appender  with a format string.
-    public func debug(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func debug(format: String, arguments: any CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .debug) else { return }
         appender.append(self, level: .debug, format: format, arguments: arguments, file: file, function: function, line: line)
     }
@@ -119,7 +119,7 @@ public class LBLogger {
     }
 
     /// Writes a informative message to the appender  with a format string.
-    public func info(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func info(format: String, arguments: any CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .info) else { return }
         appender.append(self, level: .info, format: format, arguments: arguments, file: file, function: function, line: line)
     }
@@ -131,7 +131,7 @@ public class LBLogger {
     }
 
     /// Writes a warning message to the appender  with a format string.
-    public func warn(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func warn(format: String, arguments: any CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .warn) else { return }
         appender.append(self, level: .warn, format: format, arguments: arguments, file: file, function: function, line: line)
     }
@@ -143,7 +143,7 @@ public class LBLogger {
     }
 
     /// Writes a error message to the appender with a format string.
-    public func error(format: String, arguments: CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
+    public func error(format: String, arguments: any CVarArg, file: StaticString = #file, function: StaticString = #function, line: Int = #line) {
         guard isEnabledFor(level: .error) else { return }
         appender.append(self, level: .error, format: format, arguments: arguments, file: file, function: function, line: line)
     }

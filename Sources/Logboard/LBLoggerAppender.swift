@@ -6,5 +6,5 @@ public protocol LBLoggerAppender {
     func append(_ logboard: LBLogger, level: LBLogger.Level, message: [Any], file: StaticString, function: StaticString, line: Int)
 
     /// Appends a logging message with a format sting.
-    func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: CVarArg, file: StaticString, function: StaticString, line: Int)
+    func append(_ logboard: LBLogger, level: LBLogger.Level, format: String, arguments: any CVarArg, file: StaticString, function: StaticString, line: Int)
 }
