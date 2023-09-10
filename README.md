@@ -1,6 +1,6 @@
 # Logboard
 [![Release](https://img.shields.io/github/v/release/shogo4405/Logboard)](https://github.com/shogo4405/Logboard/releases/latest)
-[![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fshogo4405%2FLogboard%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/shogo4405/HaishinKit.swift)
+[![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fshogo4405%2FLogboard%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/shogo4405/Logboard)
 [![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fshogo4405%2FLogboard%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/shogo4405/Logboard)
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/shogo4405/Logboard/master/LICENSE.md)
 
