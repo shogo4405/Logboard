@@ -3,7 +3,7 @@ import Logboard
 import HaishinKit
 
 protocol LogboardServiceDelegate: AnyObject {
-    func onData(_ data: Logboard.Data)
+    func onData(_ data: LBLogger.Data)
 }
 
 final class LogboardService: HaishinKit.NetService {
@@ -20,7 +20,7 @@ final class LogboardService: HaishinKit.NetService {
             space = line == "" ? space + 1 : 0
             if space == 2 {
                 if let data = lines[idx - 2].data(using: .utf8) {
-                    if let logboardData = Logboard.Data(data) {
+                    if let logboardData = LBLogger.Data(data) {
                         delegate?.onData(logboardData)
                     }
                 }

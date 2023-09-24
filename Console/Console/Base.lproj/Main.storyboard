@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -162,7 +162,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LogboardConsole" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Console" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,7 +192,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LogboardConsole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Console" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="538" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,7 +236,7 @@
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-dD-tE8">
                                 <rect key="frame" x="0.0" y="242" width="538" height="28"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S5Z-XH-mSN">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S5Z-XH-mSN">
                                         <rect key="frame" x="2" y="6" width="40" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Level:" id="8VQ-Cy-Lfh">
                                             <font key="font" metaFont="system"/>
@@ -255,7 +255,7 @@
                                             <action selector="didChangeLevelPopupButton:" target="XfG-lQ-9wD" id="Ibj-gs-jzP"/>
                                         </connections>
                                     </popUpButton>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-bU-EV7">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-bU-EV7">
                                         <rect key="frame" x="120" y="6" width="30" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port" id="ea4-09-PKR">
                                             <font key="font" metaFont="system"/>
@@ -263,7 +263,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-Jd-BPr">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-Jd-BPr">
                                         <rect key="frame" x="156" y="4" width="354" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="22222" drawsBackground="YES" id="SSj-1m-xpi">
                                             <font key="font" metaFont="system"/>
@@ -273,14 +273,14 @@
                                     </textField>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="IQo-QY-aPP">
                                         <rect key="frame" x="518" y="6" width="16" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="QGS-vg-adA"/>
-                                            <constraint firstAttribute="width" constant="16" id="gLM-Pb-mQj"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTrashEmpty" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="bPp-Nb-xnf">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="QGS-vg-adA"/>
+                                            <constraint firstAttribute="width" constant="16" id="gLM-Pb-mQj"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="didClickedTrash:" target="XfG-lQ-9wD" id="ebB-Ne-yB1"/>
                                         </connections>

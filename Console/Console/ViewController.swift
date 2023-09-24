@@ -1,8 +1,8 @@
 import Cocoa
 import Logboard
 
-extension Logboard.Level {
-    static public let allValues: [Logboard.Level] = [.trace, .debug, .info, .warn, .error]
+extension LBLogger.Level {
+    static public let allValues: [LBLogger.Level] = [.trace, .debug, .info, .warn, .error]
 }
 
 final class ViewController: NSViewController {
@@ -11,8 +11,8 @@ final class ViewController: NSViewController {
     @IBOutlet var textFiled: NSTextView!
     @IBOutlet var levelPopupButton: NSPopUpButton!
 
-    private var logs: [Logboard.Data] = []
-    private var level: Logboard.Level = .trace
+    private var logs: [LBLogger.Data] = []
+    private var level: LBLogger.Level = .trace
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ final class ViewController: NSViewController {
         service?.startRunning()
         textFiled.textStorage?.append(NSMutableAttributedString(string: "\n"))
 
-        for level in Logboard.Level.allValues {
+        for level in LBLogger.Level.allValues {
             levelPopupButton.addItem(withTitle: level.description)
         }
     }
@@ -37,7 +37,7 @@ final class ViewController: NSViewController {
     }
 
     @IBAction func didChangeLevelPopupButton(_ sender: NSPopUpButton) {
-        guard let level = Logboard.Level(string: sender.selectedItem?.title ?? "") else {
+        guard let level = LBLogger.Level(string: sender.selectedItem?.title ?? "") else {
             return
         }
         self.level = level
@@ -49,7 +49,7 @@ final class ViewController: NSViewController {
         textFiled.scrollToEndOfDocument(nil)
     }
 
-    private func render(_ data: Logboard.Data) {
+    private func render(_ data: LBLogger.Data) {
         logs.append(data)
         guard level.rawValue <= data.level.rawValue else {
             return
@@ -60,7 +60,7 @@ final class ViewController: NSViewController {
 }
 
 extension ViewController: LogboardServiceDelegate {
-    func onData(_ data: Logboard.Data) {
+    func onData(_ data: LBLogger.Data) {
         DispatchQueue.main.async {
             self.render(data)
         }

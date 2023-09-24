@@ -1,7 +1,7 @@
 import Foundation
 import Logboard
 
-extension Logboard.Data {
+extension LBLogger.Data {
     var attributedString: NSAttributedString {
         let string = description + "\n"
         let attributedString = NSMutableAttributedString(string: string)

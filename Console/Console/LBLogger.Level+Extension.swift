@@ -1,7 +1,8 @@
 import Foundation
 import Logboard
+import Cocoa
 
-extension Logboard.Level {
+extension LBLogger.Level {
     var color: NSColor {
         switch self {
         case .trace:

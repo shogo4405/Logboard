@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,14 +11,10 @@
 		297E668A1FACAEE4003C8228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E66891FACAEE4003C8228 /* ViewController.swift */; };
 		297E668C1FACAEE4003C8228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E668B1FACAEE4003C8228 /* Assets.xcassets */; };
 		297E668F1FACAEE4003C8228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297E668D1FACAEE4003C8228 /* Main.storyboard */; };
-		29C4D5771FAD537700978193 /* Logboard.Level+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5761FAD537700978193 /* Logboard.Level+Extension.swift */; };
-		29C4D5791FADCACC00978193 /* Logboard.Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5781FADCACB00978193 /* Logboard.Date+Extension.swift */; };
-		29C4D57D1FADD58D00978193 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 29C4D57B1FADD58C00978193 /* Cartfile */; };
+		29C4D5771FAD537700978193 /* LBLogger.Level+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5761FAD537700978193 /* LBLogger.Level+Extension.swift */; };
+		29C4D5791FADCACC00978193 /* LBLogger.Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4D5781FADCACB00978193 /* LBLogger.Date+Extension.swift */; };
 		29F22F9C1FACB6AE0085ECF9 /* LogboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F22F981FACB6AE0085ECF9 /* LogboardService.swift */; };
-		BCA0070C289E55B000AAA74D /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA0070A289E55B000AAA74D /* Logboard.xcframework */; };
-		BCA0070D289E55B000AAA74D /* Logboard.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCA0070A289E55B000AAA74D /* Logboard.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BCA0070E289E55B000AAA74D /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA0070B289E55B000AAA74D /* HaishinKit.xcframework */; };
-		BCA0070F289E55B000AAA74D /* HaishinKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCA0070B289E55B000AAA74D /* HaishinKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC9EF0082AC0287600B2A76E /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC9EF0072AC0287600B2A76E /* HaishinKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -42,8 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BCA0070D289E55B000AAA74D /* Logboard.xcframework in Embed Frameworks */,
-				BCA0070F289E55B000AAA74D /* HaishinKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,12 +52,9 @@
 		297E668E1FACAEE4003C8228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		297E66901FACAEE4003C8228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297E66911FACAEE4003C8228 /* LogboardConsole.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LogboardConsole.entitlements; sourceTree = "<group>"; };
-		29C4D5761FAD537700978193 /* Logboard.Level+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logboard.Level+Extension.swift"; sourceTree = "<group>"; };
-		29C4D5781FADCACB00978193 /* Logboard.Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logboard.Date+Extension.swift"; sourceTree = "<group>"; };
-		29C4D57B1FADD58C00978193 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		29C4D5761FAD537700978193 /* LBLogger.Level+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LBLogger.Level+Extension.swift"; sourceTree = "<group>"; };
+		29C4D5781FADCACB00978193 /* LBLogger.Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LBLogger.Date+Extension.swift"; sourceTree = "<group>"; };
 		29F22F981FACB6AE0085ECF9 /* LogboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogboardService.swift; sourceTree = "<group>"; };
-		BCA0070A289E55B000AAA74D /* Logboard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Logboard.xcframework; path = Carthage/Build/Logboard.xcframework; sourceTree = "<group>"; };
-		BCA0070B289E55B000AAA74D /* HaishinKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HaishinKit.xcframework; path = Carthage/Build/HaishinKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCA0070C289E55B000AAA74D /* Logboard.xcframework in Frameworks */,
-				BCA0070E289E55B000AAA74D /* HaishinKit.xcframework in Frameworks */,
+				BC9EF0082AC0287600B2A76E /* HaishinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +72,8 @@
 		297E667B1FACAEE4003C8228 = {
 			isa = PBXGroup;
 			children = (
-				29C4D57B1FADD58C00978193 /* Cartfile */,
 				297E66861FACAEE4003C8228 /* Console */,
 				297E66851FACAEE4003C8228 /* Products */,
-				29F22F9D1FACB7080085ECF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,23 +91,14 @@
 				297E66871FACAEE4003C8228 /* AppDelegate.swift */,
 				297E668B1FACAEE4003C8228 /* Assets.xcassets */,
 				297E66901FACAEE4003C8228 /* Info.plist */,
-				29C4D5781FADCACB00978193 /* Logboard.Date+Extension.swift */,
-				29C4D5761FAD537700978193 /* Logboard.Level+Extension.swift */,
+				29C4D5781FADCACB00978193 /* LBLogger.Date+Extension.swift */,
+				29C4D5761FAD537700978193 /* LBLogger.Level+Extension.swift */,
 				297E66911FACAEE4003C8228 /* LogboardConsole.entitlements */,
 				29F22F981FACB6AE0085ECF9 /* LogboardService.swift */,
 				297E668D1FACAEE4003C8228 /* Main.storyboard */,
 				297E66891FACAEE4003C8228 /* ViewController.swift */,
 			);
 			path = Console;
-			sourceTree = "<group>";
-		};
-		29F22F9D1FACB7080085ECF9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BCA0070B289E55B000AAA74D /* HaishinKit.xcframework */,
-				BCA0070A289E55B000AAA74D /* Logboard.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +120,9 @@
 			dependencies = (
 			);
 			name = Console;
+			packageProductDependencies = (
+				BC9EF0072AC0287600B2A76E /* HaishinKit */,
+			);
 			productName = LogboardConsole;
 			productReference = 297E66841FACAEE4003C8228 /* Console.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +153,9 @@
 				Base,
 			);
 			mainGroup = 297E667B1FACAEE4003C8228;
+			packageReferences = (
+				BC9EF0062AC0287600B2A76E /* XCRemoteSwiftPackageReference "HaishinKit" */,
+			);
 			productRefGroup = 297E66851FACAEE4003C8228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				297E668C1FACAEE4003C8228 /* Assets.xcassets in Resources */,
-				29C4D57D1FADD58D00978193 /* Cartfile in Resources */,
 				297E668F1FACAEE4003C8228 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,8 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				297E668A1FACAEE4003C8228 /* ViewController.swift in Sources */,
-				29C4D5791FADCACC00978193 /* Logboard.Date+Extension.swift in Sources */,
-				29C4D5771FAD537700978193 /* Logboard.Level+Extension.swift in Sources */,
+				29C4D5791FADCACC00978193 /* LBLogger.Date+Extension.swift in Sources */,
+				29C4D5771FAD537700978193 /* LBLogger.Level+Extension.swift in Sources */,
 				297E66881FACAEE4003C8228 /* AppDelegate.swift in Sources */,
 				29F22F9C1FACB6AE0085ECF9 /* LogboardService.swift in Sources */,
 			);
@@ -367,6 +351,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.LogboardConsole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -390,6 +375,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.shogo4405.LogboardConsole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -418,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC9EF0062AC0287600B2A76E /* XCRemoteSwiftPackageReference "HaishinKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shogo4405/HaishinKit.swift/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC9EF0072AC0287600B2A76E /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC9EF0062AC0287600B2A76E /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = HaishinKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 297E667C1FACAEE4003C8228 /* Project object */;
 }
