@@ -6,9 +6,10 @@ import PackageDescription
 let package = Package(
     name: "Logboard",
     platforms: [
-        .iOS(.v12),
-        .tvOS(.v12),
-        .macOS(.v10_13),
+        .iOS(.v13),
+        .tvOS(.v13),
+        .macOS(.v10_15),
+        .watchOS(.v6),
         .macCatalyst(.v14),
         .visionOS(.v1)
     ],
