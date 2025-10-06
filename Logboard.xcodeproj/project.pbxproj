@@ -14,14 +14,12 @@
 		29617AFD232E6D7D00AD06AE /* ConsoleAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF6232E6D7D00AD06AE /* ConsoleAppender.swift */; };
 		29617AFE232E6D7D00AD06AE /* MultiAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF7232E6D7D00AD06AE /* MultiAppender.swift */; };
 		29617AFF232E6D7D00AD06AE /* LBLogger.Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29617AF8232E6D7D00AD06AE /* LBLogger.Data.swift */; };
-		BC32B6382AA0C8A10061A97E /* Logboard.h in Headers */ = {isa = PBXBuildFile; fileRef = BC32B6372AA0C8A10061A97E /* Logboard.h */; };
 		BC659D6728CE310B00D99846 /* OSLoggerAppender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC659D6628CE310B00D99846 /* OSLoggerAppender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		293875391F35D45B009F4B30 /* Logboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		293875D81F3725F9009F4B30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		293875DA1F372601009F4B30 /* Logboard.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Logboard.podspec; sourceTree = "<group>"; };
 		29617AF2232E6D7C00AD06AE /* LBLoggerAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LBLoggerAppender.swift; path = Sources/Logboard/LBLoggerAppender.swift; sourceTree = "<group>"; };
 		29617AF3232E6D7D00AD06AE /* NullAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NullAppender.swift; path = Sources/Logboard/NullAppender.swift; sourceTree = "<group>"; };
 		29617AF4232E6D7D00AD06AE /* LBLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LBLogger.swift; path = Sources/Logboard/LBLogger.swift; sourceTree = "<group>"; };
@@ -30,9 +28,7 @@
 		29617AF7232E6D7D00AD06AE /* MultiAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiAppender.swift; path = Sources/Logboard/MultiAppender.swift; sourceTree = "<group>"; };
 		29617AF8232E6D7D00AD06AE /* LBLogger.Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LBLogger.Data.swift; path = Sources/Logboard/LBLogger.Data.swift; sourceTree = "<group>"; };
 		29617B16232E6E7900AD06AE /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		BC32B6372AA0C8A10061A97E /* Logboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logboard.h; sourceTree = "<group>"; };
 		BC659D6628CE310B00D99846 /* OSLoggerAppender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSLoggerAppender.swift; path = Sources/Logboard/OSLoggerAppender.swift; sourceTree = "<group>"; };
-		BCE99A1A2AA0CBDA008CDAD7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Logboard/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +47,6 @@
 			children = (
 				29617B16232E6E7900AD06AE /* Package.swift */,
 				293875D81F3725F9009F4B30 /* README.md */,
-				293875DA1F372601009F4B30 /* Logboard.podspec */,
 				293874B61F359A3B009F4B30 /* Products */,
 				2938751F1F35D1A6009F4B30 /* Sources */,
 			);
@@ -76,12 +71,10 @@
 		29617B00232E6D9800AD06AE /* Logboard */ = {
 			isa = PBXGroup;
 			children = (
-				BCE99A1A2AA0CBDA008CDAD7 /* Info.plist */,
 				29617AF6232E6D7D00AD06AE /* ConsoleAppender.swift */,
 				29617AF8232E6D7D00AD06AE /* LBLogger.Data.swift */,
 				29617AF4232E6D7D00AD06AE /* LBLogger.swift */,
 				29617AF2232E6D7C00AD06AE /* LBLoggerAppender.swift */,
-				BC32B6372AA0C8A10061A97E /* Logboard.h */,
 				29617AF7232E6D7D00AD06AE /* MultiAppender.swift */,
 				29617AF3232E6D7D00AD06AE /* NullAppender.swift */,
 				BC659D6628CE310B00D99846 /* OSLoggerAppender.swift */,
@@ -97,7 +90,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC32B6382AA0C8A10061A97E /* Logboard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

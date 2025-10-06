@@ -22,27 +22,12 @@ logger.error("error")
 ## Requirements
 |-|iOS|macOS|tvOS|watchOS|visionOS|Xcode|Swift|
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|2.5.0+|13.0+|10.15+|13.0+|6.0|1.0+|15.3+|5.8|
-|2.4.1+|12.0+|10.13+|12.0+|4.0|1.0+|15.0+|5.3|
+|2.5.0+|13.0+|10.15+|13.0+|6.0|1.0+|15.3+|5.9|
 
 ## Installation
-### CocoaPods
+### Using Swift Package Manager
 ```rb
-source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
-
-def import_pods
-pod 'Logboard', '~> 2.5.0'
-end
-
-target 'Your Target'  do
-platform :ios, '13.0'
-import_pods
-end
-```
-### Carthage
-```
-github "shogo4405/Logboard" ~> 2.5.0
+https://github.com/shogo4405/Logboard
 ```
 
 ## Appenders
@@ -65,27 +50,6 @@ logger.appender = multi
 
 ### SocketAppender
 ```swift
-let logger = LBLogger.with("identifier")
-let socket = SocketAppender()
-socket.connect("toHost", 22222)
-logger.appender = socket
-```
-
-## Network Console
-iOS, macOS, tvOS, watchOS Debugging Tool, Logging console via Network.
-![screenshot](https://user-images.githubusercontent.com/810189/183241560-5ceb2d7e-9421-4eb7-babb-370ce1429645.gif)
-
-### Download
-```
-git clone https://github.com/shogo4405/Logboard.git
-cd Logboard/Console
-carthage update --platform macOS --use-xcframewokrs
-```
-### Build
-Open xcode 'Console' and [Product] -> [Archive].
-
-### SocketAppender
-```
 let logger = LBLogger.with("identifier")
 let socket = SocketAppender()
 socket.connect("toHost", 22222)
