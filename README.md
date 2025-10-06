@@ -22,7 +22,7 @@ logger.error("error")
 ## Requirements
 |-|iOS|macOS|tvOS|watchOS|visionOS|Xcode|Swift|
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|2.5.0+|13.0+|10.15+|13.0+|6.0|1.0+|15.3+|5.9|
+|2.6.0+|15.0+|11.0+|15.0+|8.0|1.0+|26.0+|5.9|
 
 ## Installation
 ### Using Swift Package Manager
